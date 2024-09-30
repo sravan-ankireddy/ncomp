@@ -1,0 +1,128 @@
+11:48:43 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:48:43 INFO - ddp_or_single_process: Create new exp folder!
+11:48:43 INFO - ddp_or_single_process: seed : 100.0
+11:48:43 INFO - ddp_or_single_process: exp name : exp_lambda_5e-05_seed_100.0_batch_size_24_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+11:48:43 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=24, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=5e-05, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=12, patch_size=[256, 256], save_path='./checkpoint/exp_lambda_5e-05_seed_100.0_batch_size_24_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+11:48:49 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:48:49 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:48:49 INFO - main: Create experiment save folder
+11:48:49 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+11:48:52 INFO - main: Training mode : scratch!
+11:48:52 INFO - main: lambda : 5e-05
+11:48:52 INFO - main: milestones: [45, 48]
+11:48:52 INFO - main: batch_size : 24
+11:48:52 INFO - main: Joint image-text loss coefficient: 0.0025
+11:48:52 INFO - main: LPIPS coefficient: 3.5
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/autograd/graph.py:744: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [192, 96, 1, 1], strides() = [96, 1, 96, 96]
+bucket_view.sizes() = [192, 96, 1, 1], strides() = [96, 1, 1, 1] (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/torch/csrc/distributed/c10d/reducer.cpp:325.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+11:50:01 INFO - train_one_epoch: Train epoch 1: [0/137016 (0%)]	Loss: 14.513 |	MSE loss: 0.370 |	LPIPS loss: 1.031 |	Joint image-text loss: 198.227 |	Bpp loss: 9.21 |	Aux loss: 7913.84
+11:55:32 INFO - train_one_epoch: Train epoch 1: [24000/137016 (18%)]	Loss: 1.764 |	MSE loss: 0.018 |	LPIPS loss: 0.234 |	Joint image-text loss: 139.468 |	Bpp loss: 0.54 |	Aux loss: 7323.32
+12:01:07 INFO - train_one_epoch: Train epoch 1: [48000/137016 (35%)]	Loss: 1.168 |	MSE loss: 0.013 |	LPIPS loss: 0.115 |	Joint image-text loss: 99.645 |	Bpp loss: 0.48 |	Aux loss: 6654.68
+12:06:41 INFO - train_one_epoch: Train epoch 1: [72000/137016 (53%)]	Loss: 1.000 |	MSE loss: 0.012 |	LPIPS loss: 0.091 |	Joint image-text loss: 82.726 |	Bpp loss: 0.44 |	Aux loss: 5619.83
+12:12:15 INFO - train_one_epoch: Train epoch 1: [96000/137016 (70%)]	Loss: 0.964 |	MSE loss: 0.014 |	LPIPS loss: 0.087 |	Joint image-text loss: 81.852 |	Bpp loss: 0.41 |	Aux loss: 4054.52
+12:17:50 INFO - train_one_epoch: Train epoch 1: [120000/137016 (88%)]	Loss: 0.913 |	MSE loss: 0.014 |	LPIPS loss: 0.082 |	Joint image-text loss: 81.381 |	Bpp loss: 0.38 |	Aux loss: 1983.62
+12:21:53 INFO - test_epoch: Test epoch 1, File name: kodim01.png, PSNR: 19.584856260702363, MS-SSIM: 0.7231526374816895, LPIPS: 0.09964524209499359, BPP: 0.14998372395833334
+12:21:53 INFO - test_epoch: Test epoch 1, File name: kodim02.png, PSNR: 24.511195305234548, MS-SSIM: 1.5232598185539246, LPIPS: 0.07501698285341263, BPP: 0.13362630208333334
+12:21:54 INFO - test_epoch: Test epoch 1, File name: kodim03.png, PSNR: 25.323260962662996, MS-SSIM: 2.392780601978302, LPIPS: 0.05138823762536049, BPP: 0.11140950520833333
+12:21:54 INFO - test_epoch: Test epoch 1, File name: kodim04.png, PSNR: 24.01183620395407, MS-SSIM: 3.2050058245658875, LPIPS: 0.08485360443592072, BPP: 0.12727864583333334
+12:21:54 INFO - test_epoch: Test epoch 1, File name: kodim05.png, PSNR: 18.517364748779016, MS-SSIM: 3.969703793525696, LPIPS: 0.08621391654014587, BPP: 0.18806966145833334
+12:21:55 INFO - test_epoch: Test epoch 1, File name: kodim06.png, PSNR: 20.7354384724546, MS-SSIM: 4.690546870231628, LPIPS: 0.07800125330686569, BPP: 0.12125651041666667
+12:21:55 INFO - test_epoch: Test epoch 1, File name: kodim07.png, PSNR: 22.756214737763152, MS-SSIM: 5.540351450443268, LPIPS: 0.0665959045290947, BPP: 0.14200846354166666
+12:21:55 INFO - test_epoch: Test epoch 1, File name: kodim08.png, PSNR: 16.854258808669233, MS-SSIM: 6.3100650906562805, LPIPS: 0.09248554706573486, BPP: 0.17097981770833334
+12:21:55 INFO - test_epoch: Test epoch 1, File name: kodim09.png, PSNR: 23.856118399261096, MS-SSIM: 7.180004835128784, LPIPS: 0.057312656193971634, BPP: 0.10302734375
+12:21:56 INFO - test_epoch: Test epoch 1, File name: kodim10.png, PSNR: 23.529978614320743, MS-SSIM: 8.028335988521576, LPIPS: 0.0674683228135109, BPP: 0.12508138020833334
+12:21:56 INFO - test_epoch: Test epoch 1, File name: kodim11.png, PSNR: 21.953118610949375, MS-SSIM: 8.817544877529144, LPIPS: 0.07719016075134277, BPP: 0.13411458333333334
+12:21:56 INFO - test_epoch: Test epoch 1, File name: kodim12.png, PSNR: 24.397885787453603, MS-SSIM: 9.639183163642883, LPIPS: 0.06206778436899185, BPP: 0.10994466145833333
+12:21:57 INFO - test_epoch: Test epoch 1, File name: kodim13.png, PSNR: 17.613080593811603, MS-SSIM: 10.302636444568634, LPIPS: 0.13133445382118225, BPP: 0.15397135416666666
+12:21:57 INFO - test_epoch: Test epoch 1, File name: kodim14.png, PSNR: 20.87029688577541, MS-SSIM: 11.068991482257843, LPIPS: 0.08737136423587799, BPP: 0.15804036458333334
+12:21:57 INFO - test_epoch: Test epoch 1, File name: kodim15.png, PSNR: 23.519284949422072, MS-SSIM: 11.921737849712372, LPIPS: 0.06514106690883636, BPP: 0.12320963541666667
+12:21:58 INFO - test_epoch: Test epoch 1, File name: kodim16.png, PSNR: 24.051716935536085, MS-SSIM: 12.706730663776398, LPIPS: 0.06436171382665634, BPP: 0.106201171875
+12:21:58 INFO - test_epoch: Test epoch 1, File name: kodim17.png, PSNR: 23.85992967701236, MS-SSIM: 13.565687358379364, LPIPS: 0.06274920701980591, BPP: 0.13077799479166666
+12:21:58 INFO - test_epoch: Test epoch 1, File name: kodim18.png, PSNR: 20.697265605039803, MS-SSIM: 14.321296989917755, LPIPS: 0.09391617029905319, BPP: 0.15559895833333334
+12:21:58 INFO - test_epoch: Test epoch 1, File name: kodim19.png, PSNR: 20.620436819375648, MS-SSIM: 15.107837975025177, LPIPS: 0.07510457932949066, BPP: 0.11905924479166667
+12:21:59 INFO - test_epoch: Test epoch 1, File name: kodim20.png, PSNR: 23.471841997699038, MS-SSIM: 15.981439173221588, LPIPS: 0.04846036061644554, BPP: 0.10115559895833333
+12:21:59 INFO - test_epoch: Test epoch 1, File name: kodim21.png, PSNR: 21.239335395562442, MS-SSIM: 16.807176768779755, LPIPS: 0.06947524100542068, BPP: 0.1181640625
+12:22:00 INFO - test_epoch: Test epoch 1, File name: kodim22.png, PSNR: 22.638512544088833, MS-SSIM: 17.575810730457306, LPIPS: 0.09601598978042603, BPP: 0.14225260416666666
+12:22:00 INFO - test_epoch: Test epoch 1, File name: kodim23.png, PSNR: 24.700185825812873, MS-SSIM: 18.464504063129425, LPIPS: 0.050799187272787094, BPP: 0.11726888020833333
+12:22:00 INFO - test_epoch: Test epoch 1, File name: kodim24.png, PSNR: 19.94011393546094, MS-SSIM: 19.24511432647705, LPIPS: 0.08969390392303467, BPP: 0.15478515625
+12:22:00 INFO - main: average_PSNR: 22.0522dB, average_MS-SSIM: 0.8019, average_LPIPS: 0.0764, average_Bit-rate: 0.1332 bpp
+12:22:00 INFO - main: can not find recent_saved_model!
+12:22:00 INFO - main: can not find prev_bpp_best_model!
+12:22:01 INFO - main: can not find prev_ms_ssim_best_model!
+12:22:02 INFO - main: can not find prev_bpp_best_model!
+12:22:02 INFO - main: can not find prev_lpips_best_model!
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/autograd/graph.py:744: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [192, 96, 1, 1], strides() = [96, 1, 96, 96]
+bucket_view.sizes() = [192, 96, 1, 1], strides() = [96, 1, 1, 1] (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/torch/csrc/distributed/c10d/reducer.cpp:325.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/autograd/graph.py:744: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [192, 96, 1, 1], strides() = [96, 1, 96, 96]
+bucket_view.sizes() = [192, 96, 1, 1], strides() = [96, 1, 1, 1] (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/torch/csrc/distributed/c10d/reducer.cpp:325.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+12:23:10 INFO - train_one_epoch: Train epoch 2: [0/137016 (0%)]	Loss: 0.863 |	MSE loss: 0.014 |	LPIPS loss: 0.072 |	Joint image-text loss: 76.533 |	Bpp loss: 0.37 |	Aux loss: 259.12
+12:28:42 INFO - train_one_epoch: Train epoch 2: [24000/137016 (18%)]	Loss: 0.870 |	MSE loss: 0.011 |	LPIPS loss: 0.076 |	Joint image-text loss: 77.492 |	Bpp loss: 0.38 |	Aux loss: 1642.61
+12:34:15 INFO - train_one_epoch: Train epoch 2: [48000/137016 (35%)]	Loss: 0.777 |	MSE loss: 0.011 |	LPIPS loss: 0.061 |	Joint image-text loss: 73.385 |	Bpp loss: 0.34 |	Aux loss: 3402.27
+12:39:48 INFO - train_one_epoch: Train epoch 2: [72000/137016 (53%)]	Loss: 0.784 |	MSE loss: 0.010 |	LPIPS loss: 0.063 |	Joint image-text loss: 71.264 |	Bpp loss: 0.35 |	Aux loss: 5392.73
+12:45:21 INFO - train_one_epoch: Train epoch 2: [96000/137016 (70%)]	Loss: 0.800 |	MSE loss: 0.013 |	LPIPS loss: 0.067 |	Joint image-text loss: 67.756 |	Bpp loss: 0.36 |	Aux loss: 7471.21
+12:50:55 INFO - train_one_epoch: Train epoch 2: [120000/137016 (88%)]	Loss: 0.785 |	MSE loss: 0.011 |	LPIPS loss: 0.064 |	Joint image-text loss: 70.945 |	Bpp loss: 0.35 |	Aux loss: 9768.78
+12:54:53 INFO - test_epoch: Test epoch 2, File name: kodim01.png, PSNR: 20.604935728779033, MS-SSIM: 0.7732224464416504, LPIPS: 0.08490268886089325, BPP: 0.131103515625
+12:54:54 INFO - test_epoch: Test epoch 2, File name: kodim02.png, PSNR: 25.4337253657156, MS-SSIM: 1.6025044322013855, LPIPS: 0.06235833466053009, BPP: 0.108642578125
+12:54:54 INFO - test_epoch: Test epoch 2, File name: kodim03.png, PSNR: 25.98207870826699, MS-SSIM: 2.4938486218452454, LPIPS: 0.039511457085609436, BPP: 0.08463541666666667
+12:54:54 INFO - test_epoch: Test epoch 2, File name: kodim04.png, PSNR: 24.7461908441913, MS-SSIM: 3.3292561173439026, LPIPS: 0.06614264845848083, BPP: 0.10221354166666667
+12:54:54 INFO - test_epoch: Test epoch 2, File name: kodim05.png, PSNR: 19.37088510283886, MS-SSIM: 4.121542990207672, LPIPS: 0.07235792279243469, BPP: 0.16707356770833334
+12:54:55 INFO - test_epoch: Test epoch 2, File name: kodim06.png, PSNR: 21.36679733758832, MS-SSIM: 4.868963539600372, LPIPS: 0.06803642213344574, BPP: 0.098876953125
+12:54:55 INFO - test_epoch: Test epoch 2, File name: kodim07.png, PSNR: 24.093384005825254, MS-SSIM: 5.762457191944122, LPIPS: 0.05588580295443535, BPP: 0.11971028645833333
+12:54:55 INFO - test_epoch: Test epoch 2, File name: kodim08.png, PSNR: 17.779714383763768, MS-SSIM: 6.567041099071503, LPIPS: 0.07594996690750122, BPP: 0.14908854166666666
+12:54:56 INFO - test_epoch: Test epoch 2, File name: kodim09.png, PSNR: 24.748151440124893, MS-SSIM: 7.4577924609184265, LPIPS: 0.04730621352791786, BPP: 0.07845052083333333
+12:54:56 INFO - test_epoch: Test epoch 2, File name: kodim10.png, PSNR: 24.272718694884958, MS-SSIM: 8.334558844566345, LPIPS: 0.05579756200313568, BPP: 0.10221354166666667
+12:54:56 INFO - test_epoch: Test epoch 2, File name: kodim11.png, PSNR: 22.72630322918234, MS-SSIM: 9.155147671699524, LPIPS: 0.0671904981136322, BPP: 0.11214192708333333
+12:54:57 INFO - test_epoch: Test epoch 2, File name: kodim12.png, PSNR: 25.332885068205563, MS-SSIM: 10.006778836250305, LPIPS: 0.04831473529338837, BPP: 0.08447265625
+12:54:57 INFO - test_epoch: Test epoch 2, File name: kodim13.png, PSNR: 18.114219920723382, MS-SSIM: 10.69024282693863, LPIPS: 0.11260595917701721, BPP: 0.13639322916666666
+12:54:57 INFO - test_epoch: Test epoch 2, File name: kodim14.png, PSNR: 21.593212722377867, MS-SSIM: 11.48074585199356, LPIPS: 0.07825177907943726, BPP: 0.13883463541666666
+12:54:58 INFO - test_epoch: Test epoch 2, File name: kodim15.png, PSNR: 24.781888651353448, MS-SSIM: 12.355310618877411, LPIPS: 0.05235746130347252, BPP: 0.09578450520833333
+12:54:58 INFO - test_epoch: Test epoch 2, File name: kodim16.png, PSNR: 24.618489332467025, MS-SSIM: 13.162104785442352, LPIPS: 0.05639126896858215, BPP: 0.0859375
+12:54:58 INFO - test_epoch: Test epoch 2, File name: kodim17.png, PSNR: 24.826184552714096, MS-SSIM: 14.044934809207916, LPIPS: 0.05280107259750366, BPP: 0.11149088541666667
+12:54:58 INFO - test_epoch: Test epoch 2, File name: kodim18.png, PSNR: 21.339082478198574, MS-SSIM: 14.826000154018402, LPIPS: 0.08088254183530807, BPP: 0.13362630208333334
+12:54:59 INFO - test_epoch: Test epoch 2, File name: kodim19.png, PSNR: 21.26023103137429, MS-SSIM: 15.634767591953278, LPIPS: 0.06321629136800766, BPP: 0.096435546875
+12:54:59 INFO - test_epoch: Test epoch 2, File name: kodim20.png, PSNR: 24.058024067646326, MS-SSIM: 16.532330751419067, LPIPS: 0.03951234742999077, BPP: 0.07096354166666667
+12:54:59 INFO - test_epoch: Test epoch 2, File name: kodim21.png, PSNR: 21.860575184816923, MS-SSIM: 17.38067764043808, LPIPS: 0.05889538303017616, BPP: 0.095947265625
+12:55:00 INFO - test_epoch: Test epoch 2, File name: kodim22.png, PSNR: 23.494945364262723, MS-SSIM: 18.175991356372833, LPIPS: 0.08012852072715759, BPP: 0.11995442708333333
+12:55:00 INFO - test_epoch: Test epoch 2, File name: kodim23.png, PSNR: 25.666489593792193, MS-SSIM: 19.081486523151398, LPIPS: 0.042463112622499466, BPP: 0.08797200520833333
+12:55:00 INFO - test_epoch: Test epoch 2, File name: kodim24.png, PSNR: 20.58049082917018, MS-SSIM: 19.890418529510498, LPIPS: 0.0765925943851471, BPP: 0.13525390625
+12:55:00 INFO - main: average_PSNR: 22.8605dB, average_MS-SSIM: 0.8288, average_LPIPS: 0.0641, average_Bit-rate: 0.1103 bpp
+12:56:13 INFO - train_one_epoch: Train epoch 3: [0/137016 (0%)]	Loss: 0.772 |	MSE loss: 0.012 |	LPIPS loss: 0.060 |	Joint image-text loss: 71.142 |	Bpp loss: 0.35 |	Aux loss: 11407.60
+13:01:45 INFO - train_one_epoch: Train epoch 3: [24000/137016 (18%)]	Loss: 0.782 |	MSE loss: 0.010 |	LPIPS loss: 0.058 |	Joint image-text loss: 72.337 |	Bpp loss: 0.37 |	Aux loss: 13644.02
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: got SIGCONT
+slurmstepd: error: *** JOB 1966384 ON c316-002 CANCELLED AT 2024-09-22T13:02:43 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 1966384.0 ON c316-002 CANCELLED AT 2024-09-22T13:02:43 ***
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 132 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+srun: error: c316-002: task 0: Terminated

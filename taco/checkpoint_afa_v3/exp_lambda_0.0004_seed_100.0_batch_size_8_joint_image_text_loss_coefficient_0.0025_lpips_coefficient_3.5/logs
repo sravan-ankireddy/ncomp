@@ -1,0 +1,33 @@
+10:54:08 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:54:08 INFO - ddp_or_single_process: Create new exp folder!
+10:54:08 INFO - ddp_or_single_process: seed : 100.0
+10:54:08 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+10:54:08 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_v3/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+10:54:16 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:54:16 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:54:16 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:54:16 INFO - main: Create experiment save folder
+10:54:29 INFO - main: Training mode : scratch!
+10:54:29 INFO - main: lambda : 0.0004
+10:54:29 INFO - main: milestones: [45, 48]
+10:54:29 INFO - main: batch_size : 8
+10:54:29 INFO - main: Joint image-text loss coefficient: 0.0025
+10:54:29 INFO - main: LPIPS coefficient: 3.5
+10:55:46 INFO - train_one_epoch: Train epoch 1: [0/137024 (0%)]	Loss: 20.939 |	MSE loss: 0.332 |	LPIPS loss: 0.981 |	Joint image-text loss: 117.937 |	Bpp loss: 8.58 |	Aux loss: 7918.32
+11:00:28 INFO - train_one_epoch: Train epoch 1: [8000/137024 (6%)]	Loss: 1.553 |	MSE loss: 0.006 |	LPIPS loss: 0.194 |	Joint image-text loss: 69.912 |	Bpp loss: 0.55 |	Aux loss: 7333.17
+11:05:11 INFO - train_one_epoch: Train epoch 1: [16000/137024 (12%)]	Loss: 1.223 |	MSE loss: 0.007 |	LPIPS loss: 0.114 |	Joint image-text loss: 58.270 |	Bpp loss: 0.49 |	Aux loss: 6440.18
+11:09:54 INFO - train_one_epoch: Train epoch 1: [24000/137024 (18%)]	Loss: 1.187 |	MSE loss: 0.006 |	LPIPS loss: 0.112 |	Joint image-text loss: 53.935 |	Bpp loss: 0.50 |	Aux loss: 5201.76
+11:14:38 INFO - train_one_epoch: Train epoch 1: [32000/137024 (23%)]	Loss: 1.041 |	MSE loss: 0.007 |	LPIPS loss: 0.090 |	Joint image-text loss: 47.371 |	Bpp loss: 0.43 |	Aux loss: 3552.05
+11:19:23 INFO - train_one_epoch: Train epoch 1: [40000/137024 (29%)]	Loss: 1.019 |	MSE loss: 0.007 |	LPIPS loss: 0.081 |	Joint image-text loss: 48.151 |	Bpp loss: 0.43 |	Aux loss: 1292.45
+11:24:06 INFO - train_one_epoch: Train epoch 1: [48000/137024 (35%)]	Loss: 0.740 |	MSE loss: 0.003 |	LPIPS loss: 0.054 |	Joint image-text loss: 41.355 |	Bpp loss: 0.37 |	Aux loss: 966.24
+11:28:50 INFO - train_one_epoch: Train epoch 1: [56000/137024 (41%)]	Loss: 0.842 |	MSE loss: 0.005 |	LPIPS loss: 0.059 |	Joint image-text loss: 43.711 |	Bpp loss: 0.39 |	Aux loss: 2848.22
+11:33:34 INFO - train_one_epoch: Train epoch 1: [64000/137024 (47%)]	Loss: 0.812 |	MSE loss: 0.005 |	LPIPS loss: 0.055 |	Joint image-text loss: 42.526 |	Bpp loss: 0.39 |	Aux loss: 4828.43
+11:38:17 INFO - train_one_epoch: Train epoch 1: [72000/137024 (53%)]	Loss: 0.723 |	MSE loss: 0.003 |	LPIPS loss: 0.050 |	Joint image-text loss: 41.522 |	Bpp loss: 0.38 |	Aux loss: 6875.89
+11:43:00 INFO - train_one_epoch: Train epoch 1: [80000/137024 (58%)]	Loss: 0.862 |	MSE loss: 0.005 |	LPIPS loss: 0.064 |	Joint image-text loss: 38.974 |	Bpp loss: 0.40 |	Aux loss: 9144.47
+11:47:45 INFO - train_one_epoch: Train epoch 1: [88000/137024 (64%)]	Loss: 0.874 |	MSE loss: 0.007 |	LPIPS loss: 0.056 |	Joint image-text loss: 40.554 |	Bpp loss: 0.39 |	Aux loss: 11422.20
+11:52:28 INFO - train_one_epoch: Train epoch 1: [96000/137024 (70%)]	Loss: 0.858 |	MSE loss: 0.006 |	LPIPS loss: 0.059 |	Joint image-text loss: 37.251 |	Bpp loss: 0.40 |	Aux loss: 13609.99
+11:57:09 INFO - train_one_epoch: Train epoch 1: [104000/137024 (76%)]	Loss: 0.738 |	MSE loss: 0.004 |	LPIPS loss: 0.044 |	Joint image-text loss: 46.930 |	Bpp loss: 0.37 |	Aux loss: 15501.68
+12:01:51 INFO - train_one_epoch: Train epoch 1: [112000/137024 (82%)]	Loss: 0.733 |	MSE loss: 0.004 |	LPIPS loss: 0.044 |	Joint image-text loss: 39.124 |	Bpp loss: 0.36 |	Aux loss: 17006.11
+12:06:35 INFO - train_one_epoch: Train epoch 1: [120000/137024 (88%)]	Loss: 0.746 |	MSE loss: 0.004 |	LPIPS loss: 0.050 |	Joint image-text loss: 38.677 |	Bpp loss: 0.37 |	Aux loss: 17700.35
+12:11:16 INFO - train_one_epoch: Train epoch 1: [128000/137024 (93%)]	Loss: 0.758 |	MSE loss: 0.005 |	LPIPS loss: 0.047 |	Joint image-text loss: 40.762 |	Bpp loss: 0.36 |	Aux loss: 17605.09
+12:15:57 INFO - train_one_epoch: Train epoch 1: [136000/137024 (99%)]	Loss: 0.688 |	MSE loss: 0.003 |	LPIPS loss: 0.045 |	Joint image-text loss: 35.436 |	Bpp loss: 0.36 |	Aux loss: 16045.38

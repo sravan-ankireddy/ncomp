@@ -1,0 +1,70 @@
+04:30:03 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+04:30:03 INFO - ddp_or_single_process: find checkpoint...
+04:30:03 INFO - ddp_or_single_process: checkpoint exist, name: recent_model_PSNR_22.57419_MS_SSIM_0.85839_BPP_0.12837_LPIPS_0.08239_epoch_10.pth.tar
+04:30:03 INFO - ddp_or_single_process: seed : 100.0
+04:30:03 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_16_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+04:30:03 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=16, checkpoint='./checkpoint_afa/exp_lambda_0.0004_seed_100.0_batch_size_16_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/recent_model_PSNR_22.57419_MS_SSIM_0.85839_BPP_0.12837_LPIPS_0.08239_epoch_10.pth.tar', clip_max_norm=1.0, dist_port=6411, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa/exp_lambda_0.0004_seed_100.0_batch_size_16_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+04:30:11 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+04:30:11 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+04:30:11 INFO - main: Create experiment save folder
+04:30:11 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+04:30:29 INFO - main: Training mode : scratch!
+04:30:29 INFO - main: lambda : 0.0004
+04:30:29 INFO - main: milestones: [45, 48]
+04:30:29 INFO - main: batch_size : 16
+04:30:29 INFO - main: Joint image-text loss coefficient: 0.0025
+04:30:29 INFO - main: LPIPS coefficient: 3.5
+04:30:29 INFO - main: Loading ./checkpoint_afa/exp_lambda_0.0004_seed_100.0_batch_size_16_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/recent_model_PSNR_22.57419_MS_SSIM_0.85839_BPP_0.12837_LPIPS_0.08239_epoch_10.pth.tar
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+W0921 04:30:36.797940 22671155595072 torch/multiprocessing/spawn.py:145] Terminating process 3410170 via signal SIGTERM
+Traceback (most recent call last):
+  File "train.py", line 523, in <module>
+    ddp_or_single_process(sys.argv[1:])
+  File "train.py", line 514, in ddp_or_single_process
+    torch.multiprocessing.spawn(
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 281, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 237, in start_processes
+    while not context.join():
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 75, in _wrap
+    fn(i, *args)
+  File "/work/09004/sravana/ls6/ncomp/taco/train.py", line 464, in distributed_worker
+    main(opts)
+  File "/work/09004/sravana/ls6/ncomp/taco/train.py", line 228, in main
+    checkpoint = torch.load(checkpoint, map_location=device_id)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/serialization.py", line 1025, in load
+    return _load(opened_zipfile,
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/serialization.py", line 1446, in _load
+    result = unpickler.load()
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/serialization.py", line 1416, in persistent_load
+    typed_storage = load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/serialization.py", line 1390, in load_tensor
+    wrap_storage=restore_location(storage, location),
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/serialization.py", line 1319, in restore_location
+    result = map_location(storage, location)
+TypeError: 'int' object is not callable
+
+srun: error: c303-002: task 0: Exited with exit code 1

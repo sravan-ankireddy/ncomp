@@ -1,0 +1,63 @@
+11:10:07 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:10:07 INFO - ddp_or_single_process: Create new exp folder!
+11:10:07 INFO - ddp_or_single_process: seed : 100.0
+11:10:07 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_12_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+11:10:07 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=12, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa/exp_lambda_0.0004_seed_100.0_batch_size_12_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+11:10:13 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:10:13 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:10:13 INFO - main: Create experiment save folder
+11:10:13 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:10:15 INFO - main: Training mode : scratch!
+11:10:15 INFO - main: lambda : 0.0004
+11:10:15 INFO - main: milestones: [45, 48]
+11:10:15 INFO - main: batch_size : 12
+11:10:15 INFO - main: Joint image-text loss coefficient: 0.0025
+11:10:15 INFO - main: LPIPS coefficient: 3.5
+11:11:26 INFO - train_one_epoch: Train epoch 1: [0/137016 (0%)]	Loss: 11.966 |	MSE loss: 0.304 |	LPIPS loss: 0.919 |	Joint image-text loss: 141.981 |	Bpp loss: 0.49 |	Aux loss: 7920.20
+11:17:30 INFO - train_one_epoch: Train epoch 1: [12000/137016 (9%)]	Loss: 3.097 |	MSE loss: 0.029 |	LPIPS loss: 0.454 |	Joint image-text loss: 113.646 |	Bpp loss: 0.46 |	Aux loss: 7385.51
+11:23:37 INFO - train_one_epoch: Train epoch 1: [24000/137016 (18%)]	Loss: 2.084 |	MSE loss: 0.013 |	LPIPS loss: 0.299 |	Joint image-text loss: 106.452 |	Bpp loss: 0.42 |	Aux loss: 6580.59
+11:29:44 INFO - train_one_epoch: Train epoch 1: [36000/137016 (26%)]	Loss: 1.679 |	MSE loss: 0.013 |	LPIPS loss: 0.210 |	Joint image-text loss: 83.813 |	Bpp loss: 0.41 |	Aux loss: 5540.38
+11:38:41 INFO - train_one_epoch: Train epoch 1: [48000/137016 (35%)]	Loss: 1.221 |	MSE loss: 0.007 |	LPIPS loss: 0.137 |	Joint image-text loss: 81.676 |	Bpp loss: 0.35 |	Aux loss: 4129.63
+11:44:48 INFO - train_one_epoch: Train epoch 1: [60000/137016 (44%)]	Loss: 1.381 |	MSE loss: 0.012 |	LPIPS loss: 0.144 |	Joint image-text loss: 73.803 |	Bpp loss: 0.39 |	Aux loss: 2253.88
+11:50:54 INFO - train_one_epoch: Train epoch 1: [72000/137016 (53%)]	Loss: 1.255 |	MSE loss: 0.010 |	LPIPS loss: 0.130 |	Joint image-text loss: 69.309 |	Bpp loss: 0.37 |	Aux loss: 285.73
+11:57:01 INFO - train_one_epoch: Train epoch 1: [84000/137016 (61%)]	Loss: 0.992 |	MSE loss: 0.007 |	LPIPS loss: 0.086 |	Joint image-text loss: 61.984 |	Bpp loss: 0.36 |	Aux loss: 1519.63
+12:03:07 INFO - train_one_epoch: Train epoch 1: [96000/137016 (70%)]	Loss: 1.131 |	MSE loss: 0.010 |	LPIPS loss: 0.104 |	Joint image-text loss: 59.521 |	Bpp loss: 0.36 |	Aux loss: 2911.93
+12:09:14 INFO - train_one_epoch: Train epoch 1: [108000/137016 (79%)]	Loss: 0.992 |	MSE loss: 0.008 |	LPIPS loss: 0.087 |	Joint image-text loss: 54.954 |	Bpp loss: 0.35 |	Aux loss: 4312.79
+12:15:21 INFO - train_one_epoch: Train epoch 1: [120000/137016 (88%)]	Loss: 1.133 |	MSE loss: 0.010 |	LPIPS loss: 0.106 |	Joint image-text loss: 60.546 |	Bpp loss: 0.36 |	Aux loss: 5718.86
+12:21:27 INFO - train_one_epoch: Train epoch 1: [132000/137016 (96%)]	Loss: 0.968 |	MSE loss: 0.008 |	LPIPS loss: 0.073 |	Joint image-text loss: 57.578 |	Bpp loss: 0.37 |	Aux loss: 7150.18
+12:24:07 INFO - test_epoch: Test epoch 1, File name: kodim01.png, PSNR: 21.693076366294424, MS-SSIM: 0.8373827338218689, LPIPS: 0.12584474682807922, BPP: 0.14632161458333334
+12:24:08 INFO - test_epoch: Test epoch 1, File name: kodim02.png, PSNR: 25.005379821270267, MS-SSIM: 1.6923101544380188, LPIPS: 0.09506474435329437, BPP: 0.11946614583333333
+12:24:08 INFO - test_epoch: Test epoch 1, File name: kodim03.png, PSNR: 26.483044836684716, MS-SSIM: 2.606828212738037, LPIPS: 0.05939287319779396, BPP: 0.10009765625
+12:24:09 INFO - test_epoch: Test epoch 1, File name: kodim04.png, PSNR: 25.285206205656287, MS-SSIM: 3.4777584075927734, LPIPS: 0.08659924566745758, BPP: 0.11360677083333333
+12:24:10 INFO - test_epoch: Test epoch 1, File name: kodim05.png, PSNR: 20.733717877741725, MS-SSIM: 4.327107608318329, LPIPS: 0.11077568680047989, BPP: 0.17325846354166666
+12:24:10 INFO - test_epoch: Test epoch 1, File name: kodim06.png, PSNR: 22.491794555852543, MS-SSIM: 5.146154224872589, LPIPS: 0.08244648575782776, BPP: 0.11027018229166667
+12:24:11 INFO - test_epoch: Test epoch 1, File name: kodim07.png, PSNR: 25.43959766125453, MS-SSIM: 6.070798695087433, LPIPS: 0.0696181207895279, BPP: 0.13509114583333334
+12:24:11 INFO - test_epoch: Test epoch 1, File name: kodim08.png, PSNR: 19.16328514365012, MS-SSIM: 6.92855429649353, LPIPS: 0.11180464923381805, BPP: 0.1650390625
+12:24:12 INFO - test_epoch: Test epoch 1, File name: kodim09.png, PSNR: 26.00630054705706, MS-SSIM: 7.847555100917816, LPIPS: 0.06068647280335426, BPP: 0.09114583333333333
+12:24:12 INFO - test_epoch: Test epoch 1, File name: kodim10.png, PSNR: 25.693285666416294, MS-SSIM: 8.758094131946564, LPIPS: 0.0754622295498848, BPP: 0.112060546875
+12:24:13 INFO - test_epoch: Test epoch 1, File name: kodim11.png, PSNR: 24.027594273869802, MS-SSIM: 9.622015535831451, LPIPS: 0.0864218920469284, BPP: 0.11800130208333333
+12:24:13 INFO - test_epoch: Test epoch 1, File name: kodim12.png, PSNR: 26.437554269763783, MS-SSIM: 10.509668290615082, LPIPS: 0.058353543281555176, BPP: 0.09676106770833333
+12:24:14 INFO - test_epoch: Test epoch 1, File name: kodim13.png, PSNR: 19.31650976019323, MS-SSIM: 11.274129450321198, LPIPS: 0.15528427064418793, BPP: 0.14249674479166666
+12:24:14 INFO - test_epoch: Test epoch 1, File name: kodim14.png, PSNR: 22.682503726416414, MS-SSIM: 12.118118107318878, LPIPS: 0.10835066437721252, BPP: 0.146240234375
+12:24:15 INFO - test_epoch: Test epoch 1, File name: kodim15.png, PSNR: 25.66542687713013, MS-SSIM: 13.0204399228096, LPIPS: 0.07415284961462021, BPP: 0.10693359375
+12:24:16 INFO - test_epoch: Test epoch 1, File name: kodim16.png, PSNR: 25.41875635855924, MS-SSIM: 13.87944483757019, LPIPS: 0.07014317065477371, BPP: 0.09822591145833333
+12:24:16 INFO - test_epoch: Test epoch 1, File name: kodim17.png, PSNR: 25.732837382965737, MS-SSIM: 14.78933572769165, LPIPS: 0.07720821350812912, BPP: 0.120849609375
+12:24:17 INFO - test_epoch: Test epoch 1, File name: kodim18.png, PSNR: 22.47421578823232, MS-SSIM: 15.63321828842163, LPIPS: 0.10899965465068817, BPP: 0.144775390625
+12:24:17 INFO - test_epoch: Test epoch 1, File name: kodim19.png, PSNR: 22.923883323899513, MS-SSIM: 16.495845794677734, LPIPS: 0.08183420449495316, BPP: 0.11149088541666667
+12:24:18 INFO - test_epoch: Test epoch 1, File name: kodim20.png, PSNR: 25.920164689078995, MS-SSIM: 17.41897428035736, LPIPS: 0.04554585739970207, BPP: 0.08341471354166667
+12:24:18 INFO - test_epoch: Test epoch 1, File name: kodim21.png, PSNR: 22.86946395172949, MS-SSIM: 18.30735957622528, LPIPS: 0.0775056853890419, BPP: 0.104248046875
+12:24:19 INFO - test_epoch: Test epoch 1, File name: kodim22.png, PSNR: 24.464535558005387, MS-SSIM: 19.152838051319122, LPIPS: 0.10426197201013565, BPP: 0.12703450520833334
+12:24:19 INFO - test_epoch: Test epoch 1, File name: kodim23.png, PSNR: 25.91995522656321, MS-SSIM: 20.072643995285034, LPIPS: 0.055376917123794556, BPP: 0.10367838541666667
+12:24:20 INFO - test_epoch: Test epoch 1, File name: kodim24.png, PSNR: 21.633277691721542, MS-SSIM: 20.93615686893463, LPIPS: 0.11241427809000015, BPP: 0.14615885416666666
+12:24:20 INFO - main: average_PSNR: 23.8951dB, average_MS-SSIM: 0.8723, average_LPIPS: 0.0872, average_Bit-rate: 0.1215 bpp
+12:24:20 INFO - main: can not find recent_saved_model!
+12:24:20 INFO - main: can not find prev_bpp_best_model!
+12:24:21 INFO - main: can not find prev_ms_ssim_best_model!
+12:24:21 INFO - main: can not find prev_bpp_best_model!
+12:24:22 INFO - main: can not find prev_lpips_best_model!
+12:25:57 INFO - train_one_epoch: Train epoch 2: [0/137016 (0%)]	Loss: 1.035 |	MSE loss: 0.009 |	LPIPS loss: 0.084 |	Joint image-text loss: 58.632 |	Bpp loss: 0.36 |	Aux loss: 7729.84
+12:32:03 INFO - train_one_epoch: Train epoch 2: [12000/137016 (9%)]	Loss: 1.153 |	MSE loss: 0.012 |	LPIPS loss: 0.097 |	Joint image-text loss: 60.490 |	Bpp loss: 0.36 |	Aux loss: 9043.21
+12:38:10 INFO - train_one_epoch: Train epoch 2: [24000/137016 (18%)]	Loss: 0.968 |	MSE loss: 0.007 |	LPIPS loss: 0.078 |	Joint image-text loss: 55.197 |	Bpp loss: 0.37 |	Aux loss: 10001.19
+12:44:17 INFO - train_one_epoch: Train epoch 2: [36000/137016 (26%)]	Loss: 0.963 |	MSE loss: 0.008 |	LPIPS loss: 0.071 |	Joint image-text loss: 53.866 |	Bpp loss: 0.37 |	Aux loss: 10929.34
+12:50:23 INFO - train_one_epoch: Train epoch 2: [48000/137016 (35%)]	Loss: 0.842 |	MSE loss: 0.006 |	LPIPS loss: 0.063 |	Joint image-text loss: 49.629 |	Bpp loss: 0.35 |	Aux loss: 11226.82
+12:56:30 INFO - train_one_epoch: Train epoch 2: [60000/137016 (44%)]	Loss: 0.948 |	MSE loss: 0.007 |	LPIPS loss: 0.070 |	Joint image-text loss: 55.787 |	Bpp loss: 0.38 |	Aux loss: 10946.73

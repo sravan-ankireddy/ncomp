@@ -1,0 +1,55 @@
+19:13:09 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+19:13:09 INFO - ddp_or_single_process: Create new exp folder!
+19:13:09 INFO - ddp_or_single_process: seed : 100.0
+19:13:09 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_12_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+19:13:09 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=12, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_v3/exp_lambda_0.0004_seed_100.0_batch_size_12_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+19:13:16 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+19:13:16 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+19:13:16 INFO - main: Create experiment save folder
+19:13:16 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+19:13:30 INFO - main: Training mode : scratch!
+19:13:30 INFO - main: lambda : 0.0004
+19:13:30 INFO - main: milestones: [45, 48]
+19:13:30 INFO - main: batch_size : 12
+19:13:30 INFO - main: Joint image-text loss coefficient: 0.0025
+19:13:30 INFO - main: LPIPS coefficient: 3.5
+19:14:38 INFO - train_one_epoch: Train epoch 1: [0/137016 (0%)]	Loss: 21.778 |	MSE loss: 0.345 |	LPIPS loss: 0.878 |	Joint image-text loss: 145.327 |	Bpp loss: 9.36 |	Aux loss: 7916.86
+19:21:01 INFO - train_one_epoch: Train epoch 1: [12000/137016 (9%)]	Loss: 1.898 |	MSE loss: 0.014 |	LPIPS loss: 0.211 |	Joint image-text loss: 88.099 |	Bpp loss: 0.57 |	Aux loss: 7333.58
+19:27:26 INFO - train_one_epoch: Train epoch 1: [24000/137016 (18%)]	Loss: 1.399 |	MSE loss: 0.008 |	LPIPS loss: 0.131 |	Joint image-text loss: 66.993 |	Bpp loss: 0.56 |	Aux loss: 6455.31
+19:33:51 INFO - train_one_epoch: Train epoch 1: [36000/137016 (26%)]	Loss: 1.197 |	MSE loss: 0.009 |	LPIPS loss: 0.095 |	Joint image-text loss: 55.362 |	Bpp loss: 0.49 |	Aux loss: 5311.33
+19:40:16 INFO - train_one_epoch: Train epoch 1: [48000/137016 (35%)]	Loss: 1.012 |	MSE loss: 0.006 |	LPIPS loss: 0.075 |	Joint image-text loss: 61.236 |	Bpp loss: 0.43 |	Aux loss: 3538.77
+19:46:41 INFO - train_one_epoch: Train epoch 1: [60000/137016 (44%)]	Loss: 1.026 |	MSE loss: 0.007 |	LPIPS loss: 0.071 |	Joint image-text loss: 56.291 |	Bpp loss: 0.45 |	Aux loss: 1304.21
+19:53:06 INFO - train_one_epoch: Train epoch 1: [72000/137016 (53%)]	Loss: 0.933 |	MSE loss: 0.006 |	LPIPS loss: 0.064 |	Joint image-text loss: 52.757 |	Bpp loss: 0.41 |	Aux loss: 979.08
+19:59:31 INFO - train_one_epoch: Train epoch 1: [84000/137016 (61%)]	Loss: 0.893 |	MSE loss: 0.006 |	LPIPS loss: 0.063 |	Joint image-text loss: 50.727 |	Bpp loss: 0.40 |	Aux loss: 2826.60
+20:05:56 INFO - train_one_epoch: Train epoch 1: [96000/137016 (70%)]	Loss: 0.844 |	MSE loss: 0.005 |	LPIPS loss: 0.061 |	Joint image-text loss: 47.920 |	Bpp loss: 0.39 |	Aux loss: 4764.68
+20:12:21 INFO - train_one_epoch: Train epoch 1: [108000/137016 (79%)]	Loss: 0.888 |	MSE loss: 0.006 |	LPIPS loss: 0.061 |	Joint image-text loss: 48.516 |	Bpp loss: 0.40 |	Aux loss: 6960.82
+20:18:46 INFO - train_one_epoch: Train epoch 1: [120000/137016 (88%)]	Loss: 0.904 |	MSE loss: 0.006 |	LPIPS loss: 0.062 |	Joint image-text loss: 49.658 |	Bpp loss: 0.39 |	Aux loss: 9120.23
+20:25:11 INFO - train_one_epoch: Train epoch 1: [132000/137016 (96%)]	Loss: 0.861 |	MSE loss: 0.006 |	LPIPS loss: 0.055 |	Joint image-text loss: 45.737 |	Bpp loss: 0.40 |	Aux loss: 11567.48
+09:47:35 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:47:35 INFO - ddp_or_single_process: find checkpoint...
+09:47:35 INFO - ddp_or_single_process: no checkpoint is here
+09:47:35 INFO - ddp_or_single_process: seed : 100.0
+09:47:35 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_12_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+09:47:35 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=12, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=10, patch_size=[256, 256], save_path='./checkpoint_afa_v3/exp_lambda_0.0004_seed_100.0_batch_size_12_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+09:47:42 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:47:42 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:47:42 INFO - main: Create experiment save folder
+09:47:42 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:48:05 INFO - main: Training mode : scratch!
+09:48:05 INFO - main: lambda : 0.0004
+09:48:05 INFO - main: milestones: [45, 48]
+09:48:05 INFO - main: batch_size : 12
+09:48:05 INFO - main: Joint image-text loss coefficient: 0.0025
+09:48:05 INFO - main: LPIPS coefficient: 3.5
+09:49:31 INFO - train_one_epoch: Train epoch 1: [0/137016 (0%)]	Loss: 20.345 |	MSE loss: 0.271 |	LPIPS loss: 1.027 |	Joint image-text loss: 145.467 |	Bpp loss: 9.34 |	Aux loss: 7915.60
+09:55:52 INFO - train_one_epoch: Train epoch 1: [12000/137016 (9%)]	Loss: 1.791 |	MSE loss: 0.009 |	LPIPS loss: 0.216 |	Joint image-text loss: 89.120 |	Bpp loss: 0.57 |	Aux loss: 7330.15
+10:02:21 INFO - train_one_epoch: Train epoch 1: [24000/137016 (18%)]	Loss: 1.376 |	MSE loss: 0.008 |	LPIPS loss: 0.128 |	Joint image-text loss: 73.966 |	Bpp loss: 0.55 |	Aux loss: 6434.57
+10:08:46 INFO - train_one_epoch: Train epoch 1: [36000/137016 (26%)]	Loss: 1.165 |	MSE loss: 0.008 |	LPIPS loss: 0.094 |	Joint image-text loss: 61.006 |	Bpp loss: 0.48 |	Aux loss: 5235.32
+10:15:10 INFO - train_one_epoch: Train epoch 1: [48000/137016 (35%)]	Loss: 1.049 |	MSE loss: 0.007 |	LPIPS loss: 0.085 |	Joint image-text loss: 57.194 |	Bpp loss: 0.43 |	Aux loss: 3577.51
+10:21:35 INFO - train_one_epoch: Train epoch 1: [60000/137016 (44%)]	Loss: 1.050 |	MSE loss: 0.007 |	LPIPS loss: 0.075 |	Joint image-text loss: 59.082 |	Bpp loss: 0.44 |	Aux loss: 1345.42
+10:28:00 INFO - train_one_epoch: Train epoch 1: [72000/137016 (53%)]	Loss: 0.966 |	MSE loss: 0.007 |	LPIPS loss: 0.067 |	Joint image-text loss: 53.242 |	Bpp loss: 0.41 |	Aux loss: 945.34
+10:34:24 INFO - train_one_epoch: Train epoch 1: [84000/137016 (61%)]	Loss: 0.889 |	MSE loss: 0.006 |	LPIPS loss: 0.060 |	Joint image-text loss: 52.593 |	Bpp loss: 0.40 |	Aux loss: 2724.32
+10:40:48 INFO - train_one_epoch: Train epoch 1: [96000/137016 (70%)]	Loss: 0.922 |	MSE loss: 0.006 |	LPIPS loss: 0.066 |	Joint image-text loss: 51.217 |	Bpp loss: 0.40 |	Aux loss: 4597.24
+10:47:13 INFO - train_one_epoch: Train epoch 1: [108000/137016 (79%)]	Loss: 0.818 |	MSE loss: 0.005 |	LPIPS loss: 0.054 |	Joint image-text loss: 45.051 |	Bpp loss: 0.38 |	Aux loss: 6684.43
+10:53:38 INFO - train_one_epoch: Train epoch 1: [120000/137016 (88%)]	Loss: 0.904 |	MSE loss: 0.007 |	LPIPS loss: 0.061 |	Joint image-text loss: 51.904 |	Bpp loss: 0.38 |	Aux loss: 8835.44
+11:00:03 INFO - train_one_epoch: Train epoch 1: [132000/137016 (96%)]	Loss: 0.896 |	MSE loss: 0.007 |	LPIPS loss: 0.055 |	Joint image-text loss: 48.343 |	Bpp loss: 0.41 |	Aux loss: 10878.53

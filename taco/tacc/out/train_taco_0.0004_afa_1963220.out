@@ -1,0 +1,15 @@
+distributed init (rank 0): tcp://c315-015.ls6.tacc.utexas.edu:6411
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+distributed init (rank 1): tcp://c315-015.ls6.tacc.utexas.edu:6411
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+distributed init (rank 2): tcp://c315-015.ls6.tacc.utexas.edu:6411
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth

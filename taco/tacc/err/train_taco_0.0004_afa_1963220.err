@@ -1,0 +1,95 @@
+10:33:02 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:33:02 INFO - ddp_or_single_process: Create new exp folder!
+10:33:02 INFO - ddp_or_single_process: seed : 100.0
+10:33:02 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_64_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+10:33:02 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=64, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa/exp_lambda_0.0004_seed_100.0_batch_size_64_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+10:33:10 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:33:10 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:33:10 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:33:10 INFO - main: Create experiment save folder
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+10:33:24 INFO - main: Training mode : scratch!
+10:33:24 INFO - main: lambda : 0.0004
+10:33:24 INFO - main: milestones: [45, 48]
+10:33:24 INFO - main: batch_size : 64
+10:33:24 INFO - main: Joint image-text loss coefficient: 0.0025
+10:33:24 INFO - main: LPIPS coefficient: 3.5
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+W0920 10:34:59.842938 22446820255552 torch/multiprocessing/spawn.py:145] Terminating process 1376681 via signal SIGTERM
+W0920 10:34:59.843712 22446820255552 torch/multiprocessing/spawn.py:145] Terminating process 1376682 via signal SIGTERM
+Traceback (most recent call last):
+  File "train.py", line 523, in <module>
+    ddp_or_single_process(sys.argv[1:])
+  File "train.py", line 514, in ddp_or_single_process
+    torch.multiprocessing.spawn(
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 281, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 237, in start_processes
+    while not context.join():
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 188, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 75, in _wrap
+    fn(i, *args)
+  File "/work/09004/sravana/ls6/ncomp/taco/train.py", line 464, in distributed_worker
+    main(opts)
+  File "/work/09004/sravana/ls6/ncomp/taco/train.py", line 274, in main
+    train_one_epoch(
+  File "/work/09004/sravana/ls6/ncomp/taco/train.py", line 47, in train_one_epoch
+    out_net = model(d, text_embeddings)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1593, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1411, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/work/09004/sravana/ls6/ncomp/taco/models/taco.py", line 67, in forward
+    y = self.g_a(x, text_embeddings)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/work/09004/sravana/ls6/ncomp/taco/modules/transform/analysis.py", line 178, in forward
+    x = layer(x, text_embeddings)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/work/09004/sravana/ls6/ncomp/taco/modules/transform/analysis.py", line 136, in forward
+    attn_image, _ = self.self_attn(query, query, query)  # [batch_size, seq_len, dim]
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1266, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/nn/functional.py", line 5469, in multi_head_attention_forward
+    attn_output_weights = torch.bmm(q_scaled, k.transpose(-2, -1))
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 GiB. GPU 
+
+srun: error: c315-015: task 0: Exited with exit code 1

@@ -1,0 +1,48 @@
+11:44:44 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:44:44 INFO - ddp_or_single_process: Create new exp folder!
+11:44:44 INFO - ddp_or_single_process: seed : 100.0
+11:44:44 INFO - ddp_or_single_process: exp name : exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+11:44:44 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=50, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0001, lpips_coefficient=3.5, lr_epoch=[45, 48], num_workers=12, patch_size=[256, 256], save_path='./checkpoint/exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 3, 'dev.num_gpus': 3})
+11:44:50 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:44:50 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:44:50 INFO - main: Create experiment save folder
+11:44:50 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+11:44:56 INFO - main: Training mode : scratch!
+11:44:56 INFO - main: lambda : 0.0001
+11:44:56 INFO - main: milestones: [45, 48]
+11:44:56 INFO - main: batch_size : 8
+11:44:56 INFO - main: Joint image-text loss coefficient: 0.0025
+11:44:56 INFO - main: LPIPS coefficient: 3.5
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/huggingface_hub/file_download.py:1142: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/autograd/graph.py:744: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [192, 96, 1, 1], strides() = [96, 1, 96, 96]
+bucket_view.sizes() = [192, 96, 1, 1], strides() = [96, 1, 1, 1] (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/torch/csrc/distributed/c10d/reducer.cpp:325.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/site-packages/torch/autograd/graph.py:744: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608851799/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+11:46:08 INFO - train_one_epoch: Train epoch 1: [0/137024 (0%)]	Loss: 14.165 |	MSE loss: 0.278 |	LPIPS loss: 0.852 |	Joint image-text loss: 116.820 |	Bpp loss: 9.09 |	Aux loss: 7912.33
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: got SIGCONT
+slurmstepd: error: *** JOB 1966377 ON c315-010 CANCELLED AT 2024-09-22T11:47:19 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 1966377.0 ON c315-010 CANCELLED AT 2024-09-22T11:47:19 ***
+/work/09004/sravana/ls6/anaconda3/envs/taco/lib/python3.8/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 132 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+srun: error: c315-010: task 0: Terminated
