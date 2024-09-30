@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --partition=gpu-a100
-#SBATCH --job-name=train_taco_0.00001_a100_bs24_lpips1.0
+#SBATCH --partition=gpu-h100
+#SBATCH --job-name=train_taco_0.0004_h100_bs8_afa_enc_dec_text
 #SBATCH --nodes 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
 #SBATCH -t 48:00:00
 #SBATCH --output=tacc/out/%x_%j.out
 #SBATCH --error=tacc/err/%x_%j.err
-#SBATCH --account=MLL
+#SBATCH --account=NCR23002
 #SBATCH --mail-type=all
 #SBATCH --mail-user=sravan.ankireddy@utexas.edu
 

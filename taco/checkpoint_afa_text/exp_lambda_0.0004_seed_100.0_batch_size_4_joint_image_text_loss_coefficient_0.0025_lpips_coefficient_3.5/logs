@@ -1,0 +1,28 @@
+10:06:40 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:06:40 INFO - ddp_or_single_process: Create new exp folder!
+10:06:41 INFO - ddp_or_single_process: seed : 100.0
+10:06:41 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_4_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+10:06:41 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=4, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 23], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_text/exp_lambda_0.0004_seed_100.0_batch_size_4_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 1})
+10:06:54 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+10:06:54 INFO - main: Create experiment save folder
+10:07:10 INFO - main: Training mode : scratch!
+10:07:10 INFO - main: lambda : 0.0004
+10:07:10 INFO - main: milestones: [18, 23]
+10:07:10 INFO - main: batch_size : 4
+10:07:10 INFO - main: Joint image-text loss coefficient: 0.0025
+10:07:10 INFO - main: LPIPS coefficient: 3.5
+10:09:57 INFO - train_one_epoch: Train epoch 1: [0/411080 (0%)]	Loss: 36.274 |	MSE loss: 0.845 |	LPIPS loss: 1.396 |	Joint image-text loss: 81.760 |	Bpp loss: 9.22 |	Aux loss: 7916.50
+10:13:25 INFO - train_one_epoch: Train epoch 1: [4000/411080 (1%)]	Loss: 2.594 |	MSE loss: 0.018 |	LPIPS loss: 0.426 |	Joint image-text loss: 70.086 |	Bpp loss: 0.47 |	Aux loss: 7256.53
+10:16:56 INFO - train_one_epoch: Train epoch 1: [8000/411080 (2%)]	Loss: 1.933 |	MSE loss: 0.012 |	LPIPS loss: 0.299 |	Joint image-text loss: 60.448 |	Bpp loss: 0.42 |	Aux loss: 6208.73
+10:20:25 INFO - train_one_epoch: Train epoch 1: [12000/411080 (3%)]	Loss: 1.508 |	MSE loss: 0.009 |	LPIPS loss: 0.206 |	Joint image-text loss: 53.201 |	Bpp loss: 0.42 |	Aux loss: 4772.31
+10:23:52 INFO - train_one_epoch: Train epoch 1: [16000/411080 (4%)]	Loss: 1.530 |	MSE loss: 0.012 |	LPIPS loss: 0.191 |	Joint image-text loss: 48.286 |	Bpp loss: 0.42 |	Aux loss: 2966.19
+10:27:17 INFO - train_one_epoch: Train epoch 1: [20000/411080 (5%)]	Loss: 1.173 |	MSE loss: 0.007 |	LPIPS loss: 0.130 |	Joint image-text loss: 47.385 |	Bpp loss: 0.41 |	Aux loss: 719.04
+10:30:41 INFO - train_one_epoch: Train epoch 1: [24000/411080 (6%)]	Loss: 0.946 |	MSE loss: 0.005 |	LPIPS loss: 0.096 |	Joint image-text loss: 39.193 |	Bpp loss: 0.38 |	Aux loss: 1230.01
+10:34:09 INFO - train_one_epoch: Train epoch 1: [28000/411080 (7%)]	Loss: 1.116 |	MSE loss: 0.007 |	LPIPS loss: 0.119 |	Joint image-text loss: 47.082 |	Bpp loss: 0.40 |	Aux loss: 2855.92
+10:37:35 INFO - train_one_epoch: Train epoch 1: [32000/411080 (8%)]	Loss: 1.131 |	MSE loss: 0.011 |	LPIPS loss: 0.106 |	Joint image-text loss: 39.893 |	Bpp loss: 0.39 |	Aux loss: 4550.57
+10:41:03 INFO - train_one_epoch: Train epoch 1: [36000/411080 (9%)]	Loss: 1.000 |	MSE loss: 0.005 |	LPIPS loss: 0.110 |	Joint image-text loss: 41.416 |	Bpp loss: 0.37 |	Aux loss: 6215.09
+10:44:29 INFO - train_one_epoch: Train epoch 1: [40000/411080 (10%)]	Loss: 1.132 |	MSE loss: 0.012 |	LPIPS loss: 0.095 |	Joint image-text loss: 40.004 |	Bpp loss: 0.40 |	Aux loss: 8004.55
+10:47:57 INFO - train_one_epoch: Train epoch 1: [44000/411080 (11%)]	Loss: 0.876 |	MSE loss: 0.006 |	LPIPS loss: 0.072 |	Joint image-text loss: 46.796 |	Bpp loss: 0.36 |	Aux loss: 9704.11
+10:51:24 INFO - train_one_epoch: Train epoch 1: [48000/411080 (12%)]	Loss: 0.793 |	MSE loss: 0.006 |	LPIPS loss: 0.059 |	Joint image-text loss: 43.790 |	Bpp loss: 0.33 |	Aux loss: 11353.34
+10:54:47 INFO - train_one_epoch: Train epoch 1: [52000/411080 (13%)]	Loss: 1.174 |	MSE loss: 0.013 |	LPIPS loss: 0.102 |	Joint image-text loss: 40.240 |	Bpp loss: 0.38 |	Aux loss: 12621.59
+10:58:14 INFO - train_one_epoch: Train epoch 1: [56000/411080 (14%)]	Loss: 0.862 |	MSE loss: 0.007 |	LPIPS loss: 0.071 |	Joint image-text loss: 33.767 |	Bpp loss: 0.36 |	Aux loss: 13417.71

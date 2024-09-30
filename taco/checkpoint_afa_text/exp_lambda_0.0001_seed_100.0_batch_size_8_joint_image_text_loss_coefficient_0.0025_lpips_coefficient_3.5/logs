@@ -1,0 +1,117 @@
+09:21:23 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:21:23 INFO - ddp_or_single_process: Create new exp folder!
+09:21:24 INFO - ddp_or_single_process: seed : 100.0
+09:21:24 INFO - ddp_or_single_process: exp name : exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+09:21:24 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0001, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_text/exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+09:21:30 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:21:30 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:21:30 INFO - main: Create experiment save folder
+09:21:46 INFO - main: Training mode : scratch!
+09:21:46 INFO - main: lambda : 0.0001
+09:21:46 INFO - main: milestones: [18, 22]
+09:21:46 INFO - main: batch_size : 8
+09:21:46 INFO - main: Joint image-text loss coefficient: 0.0025
+09:21:46 INFO - main: LPIPS coefficient: 3.5
+09:23:23 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:23:23 INFO - ddp_or_single_process: find checkpoint...
+09:23:23 INFO - ddp_or_single_process: no checkpoint is here
+09:23:23 INFO - ddp_or_single_process: seed : 100.0
+09:23:23 INFO - ddp_or_single_process: exp name : exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+09:23:23 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0001, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_text/exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+09:23:28 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:23:28 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:23:28 INFO - main: Create experiment save folder
+09:23:30 INFO - main: Training mode : scratch!
+09:23:30 INFO - main: lambda : 0.0001
+09:23:30 INFO - main: milestones: [18, 22]
+09:23:30 INFO - main: batch_size : 8
+09:23:30 INFO - main: Joint image-text loss coefficient: 0.0025
+09:23:30 INFO - main: LPIPS coefficient: 3.5
+09:23:30 INFO - main: Loading /work/09004/sravana/ls6/ncomp/taco/checkpoint_afa_text/exp_lambda_0.0004_seed_100.0_batch_size_6_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/recent_model_PSNR_27.22219_MS_SSIM_0.91529_BPP_0.13907_LPIPS_0.02808_epoch_25.pth.tar
+09:27:15 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:27:15 INFO - ddp_or_single_process: find checkpoint...
+09:27:15 INFO - ddp_or_single_process: no checkpoint is here
+09:27:15 INFO - ddp_or_single_process: seed : 100.0
+09:27:15 INFO - ddp_or_single_process: exp name : exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+09:27:15 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0001, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_text/exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+09:27:20 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:27:20 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+09:27:20 INFO - main: Create experiment save folder
+09:27:22 INFO - main: Training mode : scratch!
+09:27:22 INFO - main: lambda : 0.0001
+09:27:22 INFO - main: milestones: [18, 22]
+09:27:22 INFO - main: batch_size : 8
+09:27:22 INFO - main: Joint image-text loss coefficient: 0.0025
+09:27:22 INFO - main: LPIPS coefficient: 3.5
+09:28:51 INFO - train_one_epoch: Train epoch 1: [0/205536 (0%)]	Loss: 19.084 |	MSE loss: 0.878 |	LPIPS loss: 1.217 |	Joint image-text loss: 118.274 |	Bpp loss: 8.82 |	Aux loss: 7913.04
+09:33:12 INFO - train_one_epoch: Train epoch 1: [8000/205536 (4%)]	Loss: 2.119 |	MSE loss: 0.025 |	LPIPS loss: 0.364 |	Joint image-text loss: 89.614 |	Bpp loss: 0.46 |	Aux loss: 7285.84
+09:37:34 INFO - train_one_epoch: Train epoch 1: [16000/205536 (8%)]	Loss: 1.544 |	MSE loss: 0.024 |	LPIPS loss: 0.213 |	Joint image-text loss: 66.002 |	Bpp loss: 0.48 |	Aux loss: 6245.40
+09:41:57 INFO - train_one_epoch: Train epoch 1: [24000/205536 (12%)]	Loss: 1.116 |	MSE loss: 0.013 |	LPIPS loss: 0.125 |	Joint image-text loss: 70.637 |	Bpp loss: 0.41 |	Aux loss: 4848.17
+09:46:20 INFO - train_one_epoch: Train epoch 1: [32000/205536 (16%)]	Loss: 0.947 |	MSE loss: 0.010 |	LPIPS loss: 0.101 |	Joint image-text loss: 58.677 |	Bpp loss: 0.38 |	Aux loss: 2990.59
+09:50:43 INFO - train_one_epoch: Train epoch 1: [40000/205536 (19%)]	Loss: 0.888 |	MSE loss: 0.011 |	LPIPS loss: 0.083 |	Joint image-text loss: 62.734 |	Bpp loss: 0.37 |	Aux loss: 678.81
+09:55:06 INFO - train_one_epoch: Train epoch 1: [48000/205536 (23%)]	Loss: 0.815 |	MSE loss: 0.009 |	LPIPS loss: 0.078 |	Joint image-text loss: 49.872 |	Bpp loss: 0.36 |	Aux loss: 1318.39
+09:59:29 INFO - train_one_epoch: Train epoch 1: [56000/205536 (27%)]	Loss: 0.837 |	MSE loss: 0.013 |	LPIPS loss: 0.081 |	Joint image-text loss: 44.940 |	Bpp loss: 0.36 |	Aux loss: 2965.88
+10:03:52 INFO - train_one_epoch: Train epoch 1: [64000/205536 (31%)]	Loss: 0.730 |	MSE loss: 0.007 |	LPIPS loss: 0.066 |	Joint image-text loss: 42.051 |	Bpp loss: 0.35 |	Aux loss: 4658.26
+10:08:15 INFO - train_one_epoch: Train epoch 1: [72000/205536 (35%)]	Loss: 0.744 |	MSE loss: 0.008 |	LPIPS loss: 0.064 |	Joint image-text loss: 52.175 |	Bpp loss: 0.34 |	Aux loss: 6392.67
+10:12:38 INFO - train_one_epoch: Train epoch 1: [80000/205536 (39%)]	Loss: 0.684 |	MSE loss: 0.007 |	LPIPS loss: 0.053 |	Joint image-text loss: 52.159 |	Bpp loss: 0.33 |	Aux loss: 8167.57
+10:17:01 INFO - train_one_epoch: Train epoch 1: [88000/205536 (43%)]	Loss: 0.718 |	MSE loss: 0.008 |	LPIPS loss: 0.059 |	Joint image-text loss: 48.126 |	Bpp loss: 0.34 |	Aux loss: 9936.80
+10:21:24 INFO - train_one_epoch: Train epoch 1: [96000/205536 (47%)]	Loss: 0.852 |	MSE loss: 0.014 |	LPIPS loss: 0.075 |	Joint image-text loss: 51.260 |	Bpp loss: 0.37 |	Aux loss: 11472.69
+10:25:48 INFO - train_one_epoch: Train epoch 1: [104000/205536 (51%)]	Loss: 0.722 |	MSE loss: 0.010 |	LPIPS loss: 0.063 |	Joint image-text loss: 37.502 |	Bpp loss: 0.34 |	Aux loss: 12601.51
+10:30:11 INFO - train_one_epoch: Train epoch 1: [112000/205536 (54%)]	Loss: 0.740 |	MSE loss: 0.010 |	LPIPS loss: 0.058 |	Joint image-text loss: 47.769 |	Bpp loss: 0.35 |	Aux loss: 13176.99
+10:34:34 INFO - train_one_epoch: Train epoch 1: [120000/205536 (58%)]	Loss: 0.706 |	MSE loss: 0.007 |	LPIPS loss: 0.063 |	Joint image-text loss: 41.773 |	Bpp loss: 0.34 |	Aux loss: 12927.71
+10:38:57 INFO - train_one_epoch: Train epoch 1: [128000/205536 (62%)]	Loss: 0.715 |	MSE loss: 0.008 |	LPIPS loss: 0.058 |	Joint image-text loss: 45.285 |	Bpp loss: 0.35 |	Aux loss: 11548.05
+10:43:21 INFO - train_one_epoch: Train epoch 1: [136000/205536 (66%)]	Loss: 0.746 |	MSE loss: 0.009 |	LPIPS loss: 0.062 |	Joint image-text loss: 49.862 |	Bpp loss: 0.34 |	Aux loss: 9293.55
+10:47:44 INFO - train_one_epoch: Train epoch 1: [144000/205536 (70%)]	Loss: 0.746 |	MSE loss: 0.010 |	LPIPS loss: 0.064 |	Joint image-text loss: 44.741 |	Bpp loss: 0.35 |	Aux loss: 5609.19
+10:52:07 INFO - train_one_epoch: Train epoch 1: [152000/205536 (74%)]	Loss: 0.697 |	MSE loss: 0.011 |	LPIPS loss: 0.054 |	Joint image-text loss: 42.371 |	Bpp loss: 0.33 |	Aux loss: 109.89
+10:56:30 INFO - train_one_epoch: Train epoch 1: [160000/205536 (78%)]	Loss: 0.687 |	MSE loss: 0.010 |	LPIPS loss: 0.053 |	Joint image-text loss: 42.412 |	Bpp loss: 0.33 |	Aux loss: 73.96
+11:00:53 INFO - train_one_epoch: Train epoch 1: [168000/205536 (82%)]	Loss: 0.700 |	MSE loss: 0.008 |	LPIPS loss: 0.054 |	Joint image-text loss: 43.872 |	Bpp loss: 0.35 |	Aux loss: 123.99
+11:05:16 INFO - train_one_epoch: Train epoch 1: [176000/205536 (86%)]	Loss: 0.610 |	MSE loss: 0.005 |	LPIPS loss: 0.040 |	Joint image-text loss: 39.806 |	Bpp loss: 0.34 |	Aux loss: 291.50
+11:09:39 INFO - train_one_epoch: Train epoch 1: [184000/205536 (90%)]	Loss: 0.564 |	MSE loss: 0.004 |	LPIPS loss: 0.039 |	Joint image-text loss: 35.429 |	Bpp loss: 0.31 |	Aux loss: 219.07
+11:13:00 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:13:00 INFO - ddp_or_single_process: find checkpoint...
+11:13:00 INFO - ddp_or_single_process: no checkpoint is here
+11:13:00 INFO - ddp_or_single_process: seed : 100.0
+11:13:00 INFO - ddp_or_single_process: exp name : exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+11:13:00 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0001, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_text/exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+11:13:06 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:13:06 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:13:06 INFO - main: Create experiment save folder
+11:13:20 INFO - main: Training mode : scratch!
+11:13:20 INFO - main: lambda : 0.0001
+11:13:20 INFO - main: milestones: [18, 22]
+11:13:20 INFO - main: batch_size : 8
+11:13:20 INFO - main: Joint image-text loss coefficient: 0.0025
+11:13:20 INFO - main: LPIPS coefficient: 3.5
+11:14:02 INFO - train_one_epoch: Train epoch 1: [192000/205536 (93%)]	Loss: 0.724 |	MSE loss: 0.009 |	LPIPS loss: 0.056 |	Joint image-text loss: 44.421 |	Bpp loss: 0.36 |	Aux loss: 137.89
+11:14:19 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:14:19 INFO - ddp_or_single_process: find checkpoint...
+11:14:19 INFO - ddp_or_single_process: no checkpoint is here
+11:14:19 INFO - ddp_or_single_process: seed : 100.0
+11:14:19 INFO - ddp_or_single_process: exp name : exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+11:14:19 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0001, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_text/exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+11:14:25 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:14:25 INFO - main: Create experiment save folder
+11:14:25 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:14:28 INFO - main: Training mode : scratch!
+11:14:28 INFO - main: lambda : 0.0001
+11:14:28 INFO - main: milestones: [18, 22]
+11:14:28 INFO - main: batch_size : 8
+11:14:28 INFO - main: Joint image-text loss coefficient: 0.0025
+11:14:28 INFO - main: LPIPS coefficient: 3.5
+11:14:28 INFO - main: Loading /work/09004/sravana/ls6/ncomp/taco/checkpoint_afa_text/exp_lambda_0.0004_seed_100.0_batch_size_6_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/recent_model_PSNR_27.22219_MS_SSIM_0.91529_BPP_0.13907_LPIPS_0.02808_epoch_25.pth.tar
+11:15:39 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:15:39 INFO - ddp_or_single_process: find checkpoint...
+11:15:39 INFO - ddp_or_single_process: no checkpoint is here
+11:15:39 INFO - ddp_or_single_process: seed : 100.0
+11:15:39 INFO - ddp_or_single_process: exp name : exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+11:15:39 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6412, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0001, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_text/exp_lambda_0.0001_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+11:15:44 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:15:44 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+11:15:44 INFO - main: Create experiment save folder
+11:15:47 INFO - main: Training mode : scratch!
+11:15:47 INFO - main: lambda : 0.0001
+11:15:47 INFO - main: milestones: [18, 22]
+11:15:47 INFO - main: batch_size : 8
+11:15:47 INFO - main: Joint image-text loss coefficient: 0.0025
+11:15:47 INFO - main: LPIPS coefficient: 3.5
+11:15:47 INFO - main: Loading /work/09004/sravana/ls6/ncomp/taco/checkpoint_afa_text/exp_lambda_0.0004_seed_100.0_batch_size_6_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/recent_model_PSNR_27.22219_MS_SSIM_0.91529_BPP_0.13907_LPIPS_0.02808_epoch_25.pth.tar

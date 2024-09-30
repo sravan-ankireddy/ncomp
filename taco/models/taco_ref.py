@@ -32,8 +32,7 @@ class TACO(CompressionModel):
         self.slice_num = slice_num
         self.slice_ch = slice_ch
         self.g_a = AnalysisTransformEX(N, M, text_embedding_dim, act=nn.ReLU)
-        # self.g_s = SynthesisTransformEX(N, M, act=nn.ReLU)
-        self.g_s = SynthesisTransformEX_text(N, M, text_embedding_dim, act=nn.ReLU)
+        self.g_s = SynthesisTransformEX(N, M, act=nn.ReLU)
         # Hyper Transform
         self.h_a = HyperAnalysisEX(N, M, act=nn.ReLU)
         self.h_s = HyperSynthesisEX(N, M, act=nn.ReLU)
@@ -158,8 +157,7 @@ class TACO(CompressionModel):
 
         y_hat = torch.cat(y_hat_slices, dim=1)
         y_likelihoods = torch.cat(y_likelihoods, dim=1)
-        # x_hat = self.g_s(y_hat)
-        x_hat = self.g_s(y_hat, text_embeddings)
+        x_hat = self.g_s(y_hat)
 
         return {
             "x_hat": x_hat,
@@ -282,8 +280,7 @@ class TACO(CompressionModel):
 
         y_hat = torch.cat(y_hat_slices, dim=1)
         torch.backends.cudnn.deterministic = False
-        # x_hat = self.g_s(y_hat)
-        x_hat = self.g_s(y_hat, text_embeddings)
+        x_hat = self.g_s(y_hat)
 
         torch.cuda.synchronize()
         end_time = time.process_time()

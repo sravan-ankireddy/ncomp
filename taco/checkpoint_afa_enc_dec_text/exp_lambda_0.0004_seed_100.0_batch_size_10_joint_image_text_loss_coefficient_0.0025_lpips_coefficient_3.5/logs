@@ -1,0 +1,21 @@
+16:01:47 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+16:01:47 INFO - ddp_or_single_process: Create new exp folder!
+16:01:47 INFO - ddp_or_single_process: seed : 100.0
+16:01:47 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_10_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+16:01:47 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=10, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_enc_dec_text/exp_lambda_0.0004_seed_100.0_batch_size_10_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+16:01:53 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+16:01:53 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+16:01:53 INFO - main: Create experiment save folder
+16:02:12 INFO - main: Training mode : scratch!
+16:02:12 INFO - main: lambda : 0.0004
+16:02:12 INFO - main: milestones: [18, 22]
+16:02:12 INFO - main: batch_size : 10
+16:02:12 INFO - main: Joint image-text loss coefficient: 0.0025
+16:02:12 INFO - main: LPIPS coefficient: 3.5
+16:02:12 INFO - main: Loading /work/09004/sravana/ls6/ncomp/taco/checkpoint_afa_enc_dec_text/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/best_psnr_model_PSNR_26.8806_MS_SSIM_0.91318_BPP_0.13815_LPIPS_0.03407_epoch_12.pth.tar
+16:03:37 INFO - train_one_epoch: Train epoch 13: [0/205540 (0%)]	Loss: 0.645 |	MSE loss: 0.005 |	LPIPS loss: 0.030 |	Joint image-text loss: 28.024 |	Bpp loss: 0.35 |	Aux loss: 11.54
+16:18:23 INFO - train_one_epoch: Train epoch 13: [10000/205540 (5%)]	Loss: 0.716 |	MSE loss: 0.005 |	LPIPS loss: 0.036 |	Joint image-text loss: 29.562 |	Bpp loss: 0.39 |	Aux loss: 10.68
+16:33:09 INFO - train_one_epoch: Train epoch 13: [20000/205540 (10%)]	Loss: 0.669 |	MSE loss: 0.004 |	LPIPS loss: 0.032 |	Joint image-text loss: 30.830 |	Bpp loss: 0.38 |	Aux loss: 10.71
+16:47:55 INFO - train_one_epoch: Train epoch 13: [30000/205540 (15%)]	Loss: 0.598 |	MSE loss: 0.003 |	LPIPS loss: 0.024 |	Joint image-text loss: 29.982 |	Bpp loss: 0.35 |	Aux loss: 10.22
+17:02:41 INFO - train_one_epoch: Train epoch 13: [40000/205540 (19%)]	Loss: 0.692 |	MSE loss: 0.005 |	LPIPS loss: 0.031 |	Joint image-text loss: 31.103 |	Bpp loss: 0.38 |	Aux loss: 11.02
+17:17:28 INFO - train_one_epoch: Train epoch 13: [50000/205540 (24%)]	Loss: 0.587 |	MSE loss: 0.002 |	LPIPS loss: 0.029 |	Joint image-text loss: 32.333 |	Bpp loss: 0.35 |	Aux loss: 11.66

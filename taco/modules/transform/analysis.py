@@ -6,61 +6,61 @@ from modules.layers.conv import conv1x1, conv3x3, conv, deconv
 from modules.layers.res_blk import *
 
 # injector, extractor
-class Injector(nn.Module) : 
-    def __init__(self, dim, text_feature_dim, num_attn_head=8) :
-        super().__init__()
+# class Injector(nn.Module) : 
+#     def __init__(self, dim, text_feature_dim, num_attn_head=8) :
+#         super().__init__()
 
-        self.text_feature_dim_proj = nn.Linear(text_feature_dim, dim)
-        nn.init.kaiming_normal_(self.text_feature_dim_proj.weight)
+#         self.text_feature_dim_proj = nn.Linear(text_feature_dim, dim)
+#         nn.init.kaiming_normal_(self.text_feature_dim_proj.weight)
 
-        self.image_norm = nn.LayerNorm(dim)
-        self.text_norm = nn.LayerNorm(dim)
+#         self.image_norm = nn.LayerNorm(dim)
+#         self.text_norm = nn.LayerNorm(dim)
 
-        self.cross_attn = nn.MultiheadAttention(dim, num_attn_head, batch_first=True)
-        self.gamma = nn.Parameter(0.0 * torch.ones((dim)), requires_grad=True) 
+#         self.cross_attn = nn.MultiheadAttention(dim, num_attn_head, batch_first=True)
+#         self.gamma = nn.Parameter(0.0 * torch.ones((dim)), requires_grad=True) 
     
-    def forward(self, image_features:torch.Tensor, text_features:torch.Tensor) :    
+#     def forward(self, image_features:torch.Tensor, text_features:torch.Tensor) :    
         
-        b,c,h,w = image_features.size()
-        image_features = image_features.contiguous().flatten(2).permute(0,2,1)
+#         b,c,h,w = image_features.size()
+#         image_features = image_features.contiguous().flatten(2).permute(0,2,1)
 
-        text_features = self.text_feature_dim_proj(text_features)
+#         text_features = self.text_feature_dim_proj(text_features)
 
-        text_features = self.text_norm(text_features)
-        image_features = self.image_norm(image_features)                                                                                                                                                                          
+#         text_features = self.text_norm(text_features)
+#         image_features = self.image_norm(image_features)                                                                                                                                                                          
 
-        attn_out, attn_weights = self.cross_attn(image_features, text_features, text_features)
+#         attn_out, attn_weights = self.cross_attn(image_features, text_features, text_features)
         
-        image_features = image_features + self.gamma * attn_out
-        image_features = image_features.contiguous().permute(0,2,1).view(b,c,h,w)
+#         image_features = image_features + self.gamma * attn_out
+#         image_features = image_features.contiguous().permute(0,2,1).view(b,c,h,w)
 
-        return image_features
+#         return image_features
 
-class Extractor(nn.Module) :
-    def __init__(self, dim, text_feature_dim, num_attn_head=8) :
-        super().__init__()
+# class Extractor(nn.Module) :
+#     def __init__(self, dim, text_feature_dim, num_attn_head=8) :
+#         super().__init__()
 
-        self.image_feature_dim_proj = nn.Linear(dim, text_feature_dim)
-        nn.init.kaiming_normal_(self.image_feature_dim_proj.weight)
+#         self.image_feature_dim_proj = nn.Linear(dim, text_feature_dim)
+#         nn.init.kaiming_normal_(self.image_feature_dim_proj.weight)
 
-        self.image_norm = nn.LayerNorm(text_feature_dim)
-        self.text_norm = nn.LayerNorm(text_feature_dim)
-        self.cross_attn = nn.MultiheadAttention(text_feature_dim, num_attn_head, batch_first=True)
+#         self.image_norm = nn.LayerNorm(text_feature_dim)
+#         self.text_norm = nn.LayerNorm(text_feature_dim)
+#         self.cross_attn = nn.MultiheadAttention(text_feature_dim, num_attn_head, batch_first=True)
     
-    def forward(self, text_features:torch.Tensor, image_features:torch.Tensor) :
+#     def forward(self, text_features:torch.Tensor, image_features:torch.Tensor) :
 
-        image_features = image_features.contiguous().flatten(2).permute(0,2,1)
+#         image_features = image_features.contiguous().flatten(2).permute(0,2,1)
 
-        image_features = self.image_feature_dim_proj(image_features)
+#         image_features = self.image_feature_dim_proj(image_features)
 
-        text_features = self.text_norm(text_features)
-        image_features = self.image_norm(image_features)
+#         text_features = self.text_norm(text_features)
+#         image_features = self.image_norm(image_features)
 
-        attn_out, attn_weights = self.cross_attn(text_features, image_features, image_features)
+#         attn_out, attn_weights = self.cross_attn(text_features, image_features, image_features)
         
-        text_features = text_features + attn_out
+#         text_features = text_features + attn_out
 
-        return text_features
+#         return text_features
 
 ## v2
 # class Injector(nn.Module):
@@ -140,114 +140,114 @@ class Extractor(nn.Module) :
 
 #         return text_features
 
-# ## v3
+## v3
 
-# class Injector(nn.Module):
-#     def __init__(self, dim, text_feature_dim, num_attn_head=8):
-#         super().__init__()
+class Injector(nn.Module):
+    def __init__(self, dim, text_feature_dim, num_attn_head=8):
+        super().__init__()
 
-#         # Project text features to match the image feature dimension
-#         self.text_feature_dim_proj = nn.Linear(text_feature_dim, dim)
-#         nn.init.kaiming_normal_(self.text_feature_dim_proj.weight)
+        # Project text features to match the image feature dimension
+        self.text_feature_dim_proj = nn.Linear(text_feature_dim, dim)
+        nn.init.kaiming_normal_(self.text_feature_dim_proj.weight)
 
-#         # Layer norms for image and text features
-#         self.image_norm = nn.LayerNorm(dim)
-#         self.text_norm = nn.LayerNorm(dim)
+        # Layer norms for image and text features
+        self.image_norm = nn.LayerNorm(dim)
+        self.text_norm = nn.LayerNorm(dim)
 
-#         # Cross-attention where Q is image, K and V are text
-#         self.cross_attn_image_text = nn.MultiheadAttention(dim, num_attn_head, batch_first=True)
+        # Cross-attention where Q is image, K and V are text
+        self.cross_attn_image_text = nn.MultiheadAttention(dim, num_attn_head, batch_first=True)
 
-#         # Cross-attention where Q is image, K and V are image + text
-#         self.cross_attn_image_both = nn.MultiheadAttention(dim, num_attn_head, batch_first=True)
+        # Cross-attention where Q is image, K and V are image + text
+        self.cross_attn_image_both = nn.MultiheadAttention(dim, num_attn_head, batch_first=True)
 
-#         # Parameters for weighted residual connections
-#         self.gamma1 = nn.Parameter(0.0 * torch.ones((dim)), requires_grad=True)
-#         self.gamma2 = nn.Parameter(0.0 * torch.ones((dim)), requires_grad=True)
+        # Parameters for weighted residual connections
+        self.gamma1 = nn.Parameter(0.0 * torch.ones((dim)), requires_grad=True)
+        self.gamma2 = nn.Parameter(0.0 * torch.ones((dim)), requires_grad=True)
 
-#     def forward(self, image_features: torch.Tensor, text_features: torch.Tensor):
-#         # Get the batch size, channels, height, and width of image features
-#         b, c, h, w = image_features.size()
+    def forward(self, image_features: torch.Tensor, text_features: torch.Tensor):
+        # Get the batch size, channels, height, and width of image features
+        b, c, h, w = image_features.size()
 
-#         # Flatten and permute image features to prepare for attention (batch_size, num_patches, channels)
-#         image_features = image_features.contiguous().flatten(2).permute(0, 2, 1)
+        # Flatten and permute image features to prepare for attention (batch_size, num_patches, channels)
+        image_features = image_features.contiguous().flatten(2).permute(0, 2, 1)
 
-#         # Project and normalize text features
-#         text_features = self.text_feature_dim_proj(text_features)
-#         text_features = self.text_norm(text_features)
+        # Project and normalize text features
+        text_features = self.text_feature_dim_proj(text_features)
+        text_features = self.text_norm(text_features)
 
-#         # Normalize image features
-#         image_features = self.image_norm(image_features)
+        # Normalize image features
+        image_features = self.image_norm(image_features)
 
-#         ### First Cross-Attention (Image attending to Text)
-#         attn_out_image_text, attn_weights_image_text = self.cross_attn_image_text(
-#             image_features, text_features, text_features
-#         )
+        ### First Cross-Attention (Image attending to Text)
+        attn_out_image_text, attn_weights_image_text = self.cross_attn_image_text(
+            image_features, text_features, text_features
+        )
 
-#         ### Second Cross-Attention (Image attending to Image + Text)
-#         combined_kv_features = torch.cat([image_features, text_features], dim=1)
-#         attn_out_image_both, attn_weights_image_both = self.cross_attn_image_both(
-#             image_features, combined_kv_features, combined_kv_features
-#         )
+        ### Second Cross-Attention (Image attending to Image + Text)
+        combined_kv_features = torch.cat([image_features, text_features], dim=1)
+        attn_out_image_both, attn_weights_image_both = self.cross_attn_image_both(
+            image_features, combined_kv_features, combined_kv_features
+        )
 
-#         ### Aggregate the results of both cross-attention mechanisms
-#         # You can change the aggregation method (sum, mean, etc.)
-#         image_features = image_features + self.gamma1 * attn_out_image_text + self.gamma2 * attn_out_image_both
+        ### Aggregate the results of both cross-attention mechanisms
+        # You can change the aggregation method (sum, mean, etc.)
+        image_features = image_features + self.gamma1 * attn_out_image_text + self.gamma2 * attn_out_image_both
 
-#         # Reshape back to original image dimensions (batch_size, channels, height, width)
-#         image_features = image_features.contiguous().permute(0, 2, 1).view(b, c, h, w)
+        # Reshape back to original image dimensions (batch_size, channels, height, width)
+        image_features = image_features.contiguous().permute(0, 2, 1).view(b, c, h, w)
 
-#         return image_features
+        return image_features
 
 
 
-# class Extractor(nn.Module):
-#     def __init__(self, dim, text_feature_dim, num_attn_head=8):
-#         super().__init__()
+class Extractor(nn.Module):
+    def __init__(self, dim, text_feature_dim, num_attn_head=8):
+        super().__init__()
 
-#         # Project image features to match the text feature dimension
-#         self.image_feature_dim_proj = nn.Linear(dim, text_feature_dim)
-#         nn.init.kaiming_normal_(self.image_feature_dim_proj.weight)
+        # Project image features to match the text feature dimension
+        self.image_feature_dim_proj = nn.Linear(dim, text_feature_dim)
+        nn.init.kaiming_normal_(self.image_feature_dim_proj.weight)
 
-#         # Layer norms for image and text features
-#         self.image_norm = nn.LayerNorm(text_feature_dim)
-#         self.text_norm = nn.LayerNorm(text_feature_dim)
+        # Layer norms for image and text features
+        self.image_norm = nn.LayerNorm(text_feature_dim)
+        self.text_norm = nn.LayerNorm(text_feature_dim)
 
-#         # Cross-attention where Q is text, K and V are image
-#         self.cross_attn_text_image = nn.MultiheadAttention(text_feature_dim, num_attn_head, batch_first=True)
+        # Cross-attention where Q is text, K and V are image
+        self.cross_attn_text_image = nn.MultiheadAttention(text_feature_dim, num_attn_head, batch_first=True)
 
-#         # Cross-attention where Q is text, K and V are text + image
-#         self.cross_attn_text_both = nn.MultiheadAttention(text_feature_dim, num_attn_head, batch_first=True)
+        # Cross-attention where Q is text, K and V are text + image
+        self.cross_attn_text_both = nn.MultiheadAttention(text_feature_dim, num_attn_head, batch_first=True)
 
-#         # Parameters for weighted residual connections
-#         self.gamma1 = nn.Parameter(0.0 * torch.ones((text_feature_dim)), requires_grad=True)
-#         self.gamma2 = nn.Parameter(0.0 * torch.ones((text_feature_dim)), requires_grad=True)
+        # Parameters for weighted residual connections
+        self.gamma1 = nn.Parameter(0.0 * torch.ones((text_feature_dim)), requires_grad=True)
+        self.gamma2 = nn.Parameter(0.0 * torch.ones((text_feature_dim)), requires_grad=True)
 
-#     def forward(self, text_features: torch.Tensor, image_features: torch.Tensor):
-#         # Flatten and permute image features to prepare for attention (batch_size, num_patches, channels)
-#         image_features = image_features.contiguous().flatten(2).permute(0, 2, 1)
+    def forward(self, text_features: torch.Tensor, image_features: torch.Tensor):
+        # Flatten and permute image features to prepare for attention (batch_size, num_patches, channels)
+        image_features = image_features.contiguous().flatten(2).permute(0, 2, 1)
 
-#         # Project and normalize image features
-#         image_features = self.image_feature_dim_proj(image_features)
-#         image_features = self.image_norm(image_features)
+        # Project and normalize image features
+        image_features = self.image_feature_dim_proj(image_features)
+        image_features = self.image_norm(image_features)
 
-#         # Normalize text features
-#         text_features = self.text_norm(text_features)
+        # Normalize text features
+        text_features = self.text_norm(text_features)
 
-#         ### First Cross-Attention (Text attending to Image)
-#         attn_out_text_image, attn_weights_text_image = self.cross_attn_text_image(
-#             text_features, image_features, image_features
-#         )
+        ### First Cross-Attention (Text attending to Image)
+        attn_out_text_image, attn_weights_text_image = self.cross_attn_text_image(
+            text_features, image_features, image_features
+        )
 
-#         ### Second Cross-Attention (Text attending to Text + Image)
-#         combined_kv_features = torch.cat([text_features, image_features], dim=1)
-#         attn_out_text_both, attn_weights_text_both = self.cross_attn_text_both(
-#             text_features, combined_kv_features, combined_kv_features
-#         )
+        ### Second Cross-Attention (Text attending to Text + Image)
+        combined_kv_features = torch.cat([text_features, image_features], dim=1)
+        attn_out_text_both, attn_weights_text_both = self.cross_attn_text_both(
+            text_features, combined_kv_features, combined_kv_features
+        )
 
-#         ### Aggregate the results of both cross-attention mechanisms
-#         text_features = text_features + self.gamma1 * attn_out_text_image + self.gamma2 * attn_out_text_both
+        ### Aggregate the results of both cross-attention mechanisms
+        text_features = text_features + self.gamma1 * attn_out_text_image + self.gamma2 * attn_out_text_both
 
-#         return text_features
+        return text_features
 
 
 

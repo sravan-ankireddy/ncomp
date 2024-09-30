@@ -220,12 +220,15 @@ def main(opts):
     
     last_epoch = 0
     checkpoint = opts.checkpoint
+    # breakpoint()
+    # checkpoint = "/work/09004/sravana/ls6/ncomp/taco/checkpoint_afa_enc_dec_text/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/best_psnr_model_PSNR_26.8806_MS_SSIM_0.91318_BPP_0.13815_LPIPS_0.03407_epoch_12.pth.tar"
     if checkpoint != "None":  # load from previous checkpoint
 
         if node_rank == 0:  
             logger.info(f"Loading {checkpoint}")
 
-        checkpoint = torch.load(checkpoint, map_location=device_id)
+        # checkpoint = torch.load(checkpoint, map_location=device_id)
+        checkpoint = torch.load(checkpoint, map_location="cpu")
         last_epoch = checkpoint["epoch"] + 1
         
         try:
@@ -470,7 +473,7 @@ def ddp_or_single_process(argvs):
 
     checkpoint = "None"
     
-    save_path = f'./checkpoint/exp_lambda_{opts.lmbda}_seed_{opts.seed}_batch_size_{opts.batch_size}_joint_image_text_loss_coefficient_{opts.joint_image_text_loss_coefficient}_lpips_coefficient_{opts.lpips_coefficient}'
+    save_path = f'./checkpoint_afa_enc_dec_text/exp_lambda_{opts.lmbda}_seed_{opts.seed}_batch_size_{opts.batch_size}_joint_image_text_loss_coefficient_{opts.joint_image_text_loss_coefficient}_lpips_coefficient_{opts.lpips_coefficient}'
     
     if os.path.exists(save_path):
         logger = logger_setup(log_file_name = 'logs', log_file_folder_name = save_path)
