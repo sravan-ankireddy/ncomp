@@ -1,2 +1,7 @@
 *.png
 *.tar
+*.pt
+*.pth
+taco/tacc/*
+perco/src/models_chk/*
+diffeic/weight/*

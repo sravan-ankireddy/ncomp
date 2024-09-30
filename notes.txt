@@ -1,0 +1,15 @@
+python -u train.py --dist_port 6411 --train_dataset_root_path /scratch/09004/sravana/MSCOCO --lpips_coefficient 3.50 --joint_image_text_loss_coefficient 0.0025 --epochs 50 --num-workers 8 --lambda 0.00002 --batch-size 64 --patch-size 256 256 --seed 100 --clip_max_norm 1.0 --lr_epoch 45 48 
+
+
+
+python -u generate_images_mscoco30k.py --image_folder_root /scratch/09004/sravana/MSCOCO/val2014 --checkpoint /home/sa53869/taco/models/chk_points/lambda_0.0004.pth.tar
+
+
+# conda create --name taco python=3.8.2
+# conda activate taco
+# conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 pytorch-cuda=12.1 -c pytorch -c nvidia
+# pip install transformers
+# pip install git+https://github.com/openai/CLIP.git
+# pip install pandas pytorch-msssim
+# pip install bitsandbytes accelerate transformers==4.37.2 vector-quantize-pytorch torchac compressai torchmetrics clean-fid lpips datasets
+
