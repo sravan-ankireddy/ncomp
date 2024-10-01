@@ -33,7 +33,7 @@ class TACO(CompressionModel):
         self.slice_ch = slice_ch
         self.g_a = AnalysisTransformEX(N, M, text_embedding_dim, act=nn.ReLU)
         # self.g_s = SynthesisTransformEX(N, M, act=nn.ReLU)
-        self.g_s = SynthesisTransformEX_text(N, M, text_embedding_dim, act=nn.ReLU)
+        self.g_s = SynthesisTransformEX(N, M, text_embedding_dim, act=nn.ReLU)
         # Hyper Transform
         self.h_a = HyperAnalysisEX(N, M, act=nn.ReLU)
         self.h_s = HyperSynthesisEX(N, M, act=nn.ReLU)

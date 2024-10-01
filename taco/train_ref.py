@@ -45,8 +45,7 @@ def train_one_epoch(
         aux_optimizer.zero_grad()
 
         out_net = model(d, text_embeddings)
-        # out_criterion = criterion(epoch, out_net, d, tokens, attention_mask)
-        out_criterion = criterion(out_net, d, tokens, attention_mask)
+        out_criterion = criterion(epoch, out_net, d, tokens, attention_mask)
 
         out_criterion["loss"].backward()
 
@@ -196,7 +195,7 @@ def main(opts):
 
     if node_rank == 0:  
 
-        test_dataset = Image_Cap_pair_dataset(image_dataset_folder = '/scratch/09004/sravana/Kodak', path_caption_json = './materials/kodak_ofa.json')
+        test_dataset = Image_Cap_pair_dataset(image_dataset_folder = './kodak', path_caption_json = './materials/kodak_ofa.json')
 
         logger.info("Training mode : scratch!")
         logger.info(f"lambda : {opts.lmbda}")
@@ -220,14 +219,12 @@ def main(opts):
     
     last_epoch = 0
     checkpoint = opts.checkpoint
-
     if checkpoint != "None":  # load from previous checkpoint
 
         if node_rank == 0:  
             logger.info(f"Loading {checkpoint}")
 
-        # checkpoint = torch.load(checkpoint, map_location=device_id)
-        checkpoint = torch.load(checkpoint, map_location="cpu")
+        checkpoint = torch.load(checkpoint, map_location=device_id)
         last_epoch = checkpoint["epoch"] + 1
         
         try:
@@ -472,7 +469,7 @@ def ddp_or_single_process(argvs):
 
     checkpoint = "None"
     
-    save_path = f'./checkpoint_afa_ect_a100/exp_lambda_{opts.lmbda}_seed_{opts.seed}_batch_size_{opts.batch_size}_joint_image_text_loss_coefficient_{opts.joint_image_text_loss_coefficient}_lpips_coefficient_{opts.lpips_coefficient}'
+    save_path = f'./checkpoint/exp_lambda_{opts.lmbda}_seed_{opts.seed}_batch_size_{opts.batch_size}_joint_image_text_loss_coefficient_{opts.joint_image_text_loss_coefficient}_lpips_coefficient_{opts.lpips_coefficient}'
     
     if os.path.exists(save_path):
         logger = logger_setup(log_file_name = 'logs', log_file_folder_name = save_path)

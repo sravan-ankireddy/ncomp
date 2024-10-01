@@ -1,0 +1,45 @@
+13:33:04 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+13:33:04 INFO - ddp_or_single_process: Create new exp folder!
+13:33:04 INFO - ddp_or_single_process: seed : 100.0
+13:33:04 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_4_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+13:33:04 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=4, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_enc_dec_text/exp_lambda_0.0004_seed_100.0_batch_size_4_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 1})
+13:33:16 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+13:33:16 INFO - main: Create experiment save folder
+13:33:34 INFO - main: Training mode : scratch!
+13:33:34 INFO - main: lambda : 0.0004
+13:33:34 INFO - main: milestones: [18, 22]
+13:33:34 INFO - main: batch_size : 4
+13:33:34 INFO - main: Joint image-text loss coefficient: 0.0025
+13:33:34 INFO - main: LPIPS coefficient: 3.5
+13:40:10 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+13:40:10 INFO - ddp_or_single_process: find checkpoint...
+13:40:10 INFO - ddp_or_single_process: no checkpoint is here
+13:40:10 INFO - ddp_or_single_process: seed : 100.0
+13:40:10 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_4_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+13:40:10 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=4, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_afa_enc_dec_text/exp_lambda_0.0004_seed_100.0_batch_size_4_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 1})
+13:40:21 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+13:40:21 INFO - main: Create experiment save folder
+13:40:24 INFO - main: Training mode : scratch!
+13:40:24 INFO - main: lambda : 0.0004
+13:40:24 INFO - main: milestones: [18, 22]
+13:40:24 INFO - main: batch_size : 4
+13:40:24 INFO - main: Joint image-text loss coefficient: 0.0025
+13:40:24 INFO - main: LPIPS coefficient: 3.5
+13:42:48 INFO - train_one_epoch: Train epoch 1: [0/411080 (0%)]	Loss: 35.157 |	MSE loss: 0.822 |	LPIPS loss: 1.352 |	Joint image-text loss: 82.538 |	Bpp loss: 8.84 |	Aux loss: 7912.06
+13:46:57 INFO - train_one_epoch: Train epoch 1: [4000/411080 (1%)]	Loss: 2.456 |	MSE loss: 0.015 |	LPIPS loss: 0.413 |	Joint image-text loss: 66.023 |	Bpp loss: 0.47 |	Aux loss: 7280.89
+13:53:57 INFO - train_one_epoch: Train epoch 1: [8000/411080 (2%)]	Loss: 2.072 |	MSE loss: 0.016 |	LPIPS loss: 0.312 |	Joint image-text loss: 61.270 |	Bpp loss: 0.42 |	Aux loss: 6190.28
+13:58:05 INFO - train_one_epoch: Train epoch 1: [12000/411080 (3%)]	Loss: 1.459 |	MSE loss: 0.009 |	LPIPS loss: 0.195 |	Joint image-text loss: 50.205 |	Bpp loss: 0.41 |	Aux loss: 4721.89
+14:02:19 INFO - train_one_epoch: Train epoch 1: [16000/411080 (4%)]	Loss: 1.595 |	MSE loss: 0.013 |	LPIPS loss: 0.207 |	Joint image-text loss: 45.908 |	Bpp loss: 0.42 |	Aux loss: 2801.47
+14:06:30 INFO - train_one_epoch: Train epoch 1: [20000/411080 (5%)]	Loss: 1.143 |	MSE loss: 0.006 |	LPIPS loss: 0.135 |	Joint image-text loss: 40.059 |	Bpp loss: 0.41 |	Aux loss: 438.13
+14:10:40 INFO - train_one_epoch: Train epoch 1: [24000/411080 (6%)]	Loss: 0.917 |	MSE loss: 0.005 |	LPIPS loss: 0.096 |	Joint image-text loss: 37.439 |	Bpp loss: 0.37 |	Aux loss: 1401.45
+14:15:07 INFO - train_one_epoch: Train epoch 1: [28000/411080 (7%)]	Loss: 1.095 |	MSE loss: 0.007 |	LPIPS loss: 0.120 |	Joint image-text loss: 43.720 |	Bpp loss: 0.40 |	Aux loss: 3170.62
+14:19:17 INFO - train_one_epoch: Train epoch 1: [32000/411080 (8%)]	Loss: 1.210 |	MSE loss: 0.011 |	LPIPS loss: 0.129 |	Joint image-text loss: 38.352 |	Bpp loss: 0.37 |	Aux loss: 4928.07
+14:23:27 INFO - train_one_epoch: Train epoch 1: [36000/411080 (9%)]	Loss: 1.023 |	MSE loss: 0.006 |	LPIPS loss: 0.110 |	Joint image-text loss: 43.590 |	Bpp loss: 0.37 |	Aux loss: 6791.55
+14:27:36 INFO - train_one_epoch: Train epoch 1: [40000/411080 (10%)]	Loss: 1.050 |	MSE loss: 0.010 |	LPIPS loss: 0.089 |	Joint image-text loss: 40.633 |	Bpp loss: 0.39 |	Aux loss: 8783.83
+14:31:45 INFO - train_one_epoch: Train epoch 1: [44000/411080 (11%)]	Loss: 0.795 |	MSE loss: 0.004 |	LPIPS loss: 0.068 |	Joint image-text loss: 36.981 |	Bpp loss: 0.36 |	Aux loss: 10846.22
+14:35:57 INFO - train_one_epoch: Train epoch 1: [48000/411080 (12%)]	Loss: 0.817 |	MSE loss: 0.005 |	LPIPS loss: 0.070 |	Joint image-text loss: 38.580 |	Bpp loss: 0.34 |	Aux loss: 12671.09
+14:40:10 INFO - train_one_epoch: Train epoch 1: [52000/411080 (13%)]	Loss: 1.195 |	MSE loss: 0.013 |	LPIPS loss: 0.109 |	Joint image-text loss: 37.021 |	Bpp loss: 0.39 |	Aux loss: 14160.36
+14:44:22 INFO - train_one_epoch: Train epoch 1: [56000/411080 (14%)]	Loss: 0.898 |	MSE loss: 0.007 |	LPIPS loss: 0.073 |	Joint image-text loss: 30.844 |	Bpp loss: 0.37 |	Aux loss: 15143.70
+14:48:34 INFO - train_one_epoch: Train epoch 1: [60000/411080 (15%)]	Loss: 0.986 |	MSE loss: 0.008 |	LPIPS loss: 0.089 |	Joint image-text loss: 33.563 |	Bpp loss: 0.39 |	Aux loss: 15340.13
+14:52:44 INFO - train_one_epoch: Train epoch 1: [64000/411080 (16%)]	Loss: 0.739 |	MSE loss: 0.004 |	LPIPS loss: 0.057 |	Joint image-text loss: 32.791 |	Bpp loss: 0.35 |	Aux loss: 14600.27
+14:56:55 INFO - train_one_epoch: Train epoch 1: [68000/411080 (17%)]	Loss: 0.859 |	MSE loss: 0.007 |	LPIPS loss: 0.067 |	Joint image-text loss: 34.214 |	Bpp loss: 0.37 |	Aux loss: 12244.64

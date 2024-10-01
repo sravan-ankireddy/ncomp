@@ -28,11 +28,36 @@ from models import TACO
 from utils.utils import *
 from utils.optimizers import *
 
+import numpy as np
+
+def prepare_input(img_tensor, device):
+    """
+    Normalize the input image tensor using predefined mean and std values.
+    Assumes img_tensor is already a PyTorch tensor on the device.
+    
+    Args:
+        img_tensor (torch.Tensor): Input image tensor of shape (C, H, W).
+        device (torch.device): Device on which the tensor resides.
+
+    Returns:
+        torch.Tensor: Normalized image tensor.
+    """
+    # Predefined mean and std values (same as original function)
+    mean = torch.tensor([123.675, 116.28, 103.53], device=device).view(3, 1, 1)
+    std = torch.tensor([58.395, 57.12, 57.375], device=device).view(3, 1, 1)
+
+    # Normalize the tensor: (img - mean) / std
+    img_tensor = (img_tensor - mean) / std
+
+    return img_tensor
+
 def train_one_epoch(
-    model, CLIP_text_model, criterion, train_dataloader, optimizer, aux_optimizer, epoch, clip_max_norm, logger, node_rank = 0
+    model, CLIP_text_model, pal_model, criterion, train_dataloader, optimizer, aux_optimizer, epoch, clip_max_norm, logger, node_rank = 0
 ):
     model.train()
     device = next(model.parameters()).device
+    
+    pal_model = torch.load('../pal4vst/deployment/pal4vst/swin-large_upernet_unified_512x512/end2end.pt').to(device)
 
     for i, (d, tokens, attention_mask) in enumerate(train_dataloader):
         d = d.to(device)
@@ -45,6 +70,20 @@ def train_one_epoch(
         aux_optimizer.zero_grad()
 
         out_net = model(d, text_embeddings)
+        breakpoint()
+        
+        # scale TACO output to 0-255
+        taco_out = torch.clamp((out_net['x_hat'] - out_net['x_hat'].min()) / (out_net['x_hat'].max() - out_net['x_hat'].min())* 255.0, 0, 255)
+        
+        # using prepare_input function from pal4vst
+        pal_in = prepare_input(taco_out, device)
+        
+        pal = pal_model(pal_in)
+        
+        
+        ## heatmap and score using pal4vst
+        breakpoint()
+        
         # out_criterion = criterion(epoch, out_net, d, tokens, attention_mask)
         out_criterion = criterion(out_net, d, tokens, attention_mask)
 
@@ -76,7 +115,7 @@ def train_one_epoch(
         
         dist.barrier()
 
-def test_epoch(epoch, test_dataset, loss_fn_alex, model, CLIP_text_model, tokenizer, save_path, logger):
+def test_epoch(epoch, test_dataset, loss_fn_alex, model, CLIP_text_model, pal_model, tokenizer, save_path, logger):
 
     avg_bpp = 0.0
     mean_PSNR = 0
@@ -147,8 +186,11 @@ def test_epoch(epoch, test_dataset, loss_fn_alex, model, CLIP_text_model, tokeni
 
 def main(opts):
 
-    node_rank = getattr(opts, "ddp.rank", 0)
+    # node_rank = getattr(opts, "ddp.rank", 0)
+    node_rank = 0
     device_id = getattr(opts, "dev.device_id", torch.device("cpu"))
+    
+    device_id = 'cuda:0'
 
     logger = logger_setup(log_file_name = 'logs', log_file_folder_name = opts.save_path)
 
@@ -163,7 +205,10 @@ def main(opts):
 
     train_dataset = MSCOCO_train_dataset(dataset_folder=opts.train_dataset_root_path, image_size = opts.patch_size, clip_name = clip_model_name, node_rank=node_rank)
 
-    train_sampler = torch.utils.data.distributed.DistributedSampler(train_dataset, shuffle=True)
+    # train_sampler = torch.utils.data.distributed.DistributedSampler(train_dataset, shuffle=True)
+    
+    train_sampler = torch.utils.data.RandomSampler(train_dataset)
+    
     batch_sampler_train = torch.utils.data.BatchSampler(train_sampler, opts.batch_size, drop_last=True)
 
     train_dataloader = DataLoader(
@@ -178,13 +223,17 @@ def main(opts):
 
     net = TACO(taco_config, text_embedding_dim = CLIP_text_model.config.hidden_size)
     net = net.to(device_id)
+    
+    
+    # PAL model
+    pal_model = torch.load('../pal4vst/deployment/pal4vst/swin-large_upernet_unified_512x512/end2end.pt').to(device_id)
 
-    net = torch.nn.parallel.DistributedDataParallel(
-            net,
-            device_ids=[device_id],
-            output_device=device_id,
-            find_unused_parameters=False,
-        )
+    # net = torch.nn.parallel.DistributedDataParallel(
+    #         net,
+    #         device_ids=[device_id],
+    #         output_device=device_id,
+    #         find_unused_parameters=False,
+    #     )
 
     optimizer, aux_optimizer = configure_optimizers(net, opts)
     
@@ -220,7 +269,8 @@ def main(opts):
     
     last_epoch = 0
     checkpoint = opts.checkpoint
-
+    # breakpoint()
+    # checkpoint = "/work/09004/sravana/ls6/ncomp/taco/checkpoint_afa_enc_dec_text/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5/best_psnr_model_PSNR_26.8806_MS_SSIM_0.91318_BPP_0.13815_LPIPS_0.03407_epoch_12.pth.tar"
     if checkpoint != "None":  # load from previous checkpoint
 
         if node_rank == 0:  
@@ -276,6 +326,7 @@ def main(opts):
         train_one_epoch(
             net,
             CLIP_text_model,
+            pal_model,
             criterion,
             train_dataloader,
             optimizer,
@@ -312,7 +363,7 @@ def main(opts):
                 net_eval.requires_grad_(False)
                 net_eval.update()
 
-                mean_PSNR, mean_MS_SSIM_prob, mean_LPIPS, Bit_rate = test_epoch(epoch, test_dataset, loss_fn_alex, net_eval, CLIP_text_model, train_dataset.tokenizer, f"{save_path}/figures/{epoch + 1}", logger)
+                mean_PSNR, mean_MS_SSIM_prob, mean_LPIPS, Bit_rate = test_epoch(epoch, test_dataset, loss_fn_alex, net_eval, CLIP_text_model, pal_model, train_dataset.tokenizer, f"{save_path}/figures/{epoch + 1}", logger)
                 
                 logger.info(f'average_PSNR: {mean_PSNR:.4f}dB, average_MS-SSIM: {mean_MS_SSIM_prob:.4f}, average_LPIPS: {mean_LPIPS:.4f}, average_Bit-rate: {Bit_rate:.4f} bpp')
             
@@ -449,7 +500,10 @@ def distributed_init(opts) -> int:
         if torch.cuda.is_available():
             dist.all_reduce(torch.zeros(1).cuda())
 
-    node_rank = torch.distributed.get_rank()
+    # node_rank = torch.distributed.get_rank()
+    
+    node_rank = 0
+    
     setattr(opts, "ddp.rank", node_rank)
     return node_rank
 
@@ -472,7 +526,7 @@ def ddp_or_single_process(argvs):
 
     checkpoint = "None"
     
-    save_path = f'./checkpoint_afa_ect_a100/exp_lambda_{opts.lmbda}_seed_{opts.seed}_batch_size_{opts.batch_size}_joint_image_text_loss_coefficient_{opts.joint_image_text_loss_coefficient}_lpips_coefficient_{opts.lpips_coefficient}'
+    save_path = f'./checkpoint_pal4vst/exp_lambda_{opts.lmbda}_seed_{opts.seed}_batch_size_{opts.batch_size}_joint_image_text_loss_coefficient_{opts.joint_image_text_loss_coefficient}_lpips_coefficient_{opts.lpips_coefficient}'
     
     if os.path.exists(save_path):
         logger = logger_setup(log_file_name = 'logs', log_file_folder_name = save_path)
@@ -509,15 +563,19 @@ def ddp_or_single_process(argvs):
     setattr(opts, "save_path", save_path)
 
     setattr(opts, "dev.num_gpus", torch.cuda.device_count())
-    setattr(opts, "ddp.world_size", torch.cuda.device_count())
+    # setattr(opts, "ddp.world_size", torch.cuda.device_count())
+    
+    setattr(opts, "ddp.world_size", 1)
 
     logger.info(f"opts: {opts}")
 
-    torch.multiprocessing.spawn(
-            fn=distributed_worker,
-            args=(main, opts),
-            nprocs=getattr(opts, "dev.num_gpus"),
-        )
+    # torch.multiprocessing.spawn(
+    #         fn=distributed_worker,
+    #         args=(main, opts),
+    #         nprocs=getattr(opts, "dev.num_gpus"),
+    #     )
+    
+    main(opts)
 
 
 if __name__ == "__main__":

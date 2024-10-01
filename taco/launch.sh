@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=gpu-h100
-#SBATCH --job-name=train_taco_0.0004_h100_bs8_afa_enc_dec_text
+#SBATCH --job-name=train_taco_0.0004_h100_bs8_afa_ect
 #SBATCH --nodes 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12

@@ -1,0 +1,18 @@
+15:50:07 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+15:50:07 INFO - ddp_or_single_process: Create new exp folder!
+15:50:07 INFO - ddp_or_single_process: seed : 100.0
+15:50:07 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+15:50:07 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_temp/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 2, 'dev.num_gpus': 2})
+15:50:11 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+15:50:11 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+15:50:11 INFO - main: Create experiment save folder
+15:50:17 INFO - main: Training mode : scratch!
+15:50:17 INFO - main: lambda : 0.0004
+15:50:17 INFO - main: milestones: [18, 22]
+15:50:17 INFO - main: batch_size : 8
+15:50:17 INFO - main: Joint image-text loss coefficient: 0.0025
+15:50:17 INFO - main: LPIPS coefficient: 3.5
+15:51:11 INFO - train_one_epoch: Train epoch 1: [0/205536 (0%)]	Loss: 36.730 |	MSE loss: 0.888 |	LPIPS loss: 1.305 |	Joint image-text loss: 115.932 |	Bpp loss: 8.77 |	Aux loss: 7920.76
+15:55:59 INFO - train_one_epoch: Train epoch 1: [8000/205536 (4%)]	Loss: 2.477 |	MSE loss: 0.016 |	LPIPS loss: 0.377 |	Joint image-text loss: 84.628 |	Bpp loss: 0.53 |	Aux loss: 7364.95
+16:00:28 INFO - train_one_epoch: Train epoch 1: [16000/205536 (8%)]	Loss: 1.830 |	MSE loss: 0.016 |	LPIPS loss: 0.214 |	Joint image-text loss: 71.374 |	Bpp loss: 0.48 |	Aux loss: 6198.45
+16:04:55 INFO - train_one_epoch: Train epoch 1: [24000/205536 (12%)]	Loss: 1.266 |	MSE loss: 0.008 |	LPIPS loss: 0.126 |	Joint image-text loss: 66.579 |	Bpp loss: 0.44 |	Aux loss: 4484.22

@@ -1,0 +1,131 @@
+17:15:59 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:15:59 INFO - ddp_or_single_process: Create new exp folder!
+17:15:59 INFO - ddp_or_single_process: seed : 100.0
+17:15:59 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+17:15:59 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_pal4vst/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 2})
+17:15:59 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:15:59 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:15:59 INFO - main: Create experiment save folder
+17:15:59 INFO - main: Create experiment save folder
+17:16:09 INFO - main: Training mode : scratch!
+17:16:09 INFO - main: Training mode : scratch!
+17:16:09 INFO - main: lambda : 0.0004
+17:16:09 INFO - main: lambda : 0.0004
+17:16:09 INFO - main: milestones: [18, 22]
+17:16:09 INFO - main: milestones: [18, 22]
+17:16:09 INFO - main: batch_size : 8
+17:16:09 INFO - main: batch_size : 8
+17:16:09 INFO - main: Joint image-text loss coefficient: 0.0025
+17:16:09 INFO - main: Joint image-text loss coefficient: 0.0025
+17:16:09 INFO - main: LPIPS coefficient: 3.5
+17:16:09 INFO - main: LPIPS coefficient: 3.5
+17:16:45 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:16:45 INFO - ddp_or_single_process: find checkpoint...
+17:16:45 INFO - ddp_or_single_process: no checkpoint is here
+17:16:45 INFO - ddp_or_single_process: seed : 100.0
+17:16:45 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+17:16:45 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_pal4vst/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 2})
+17:16:45 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:16:45 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:16:45 INFO - main: Create experiment save folder
+17:16:45 INFO - main: Create experiment save folder
+17:16:47 INFO - main: Training mode : scratch!
+17:16:47 INFO - main: Training mode : scratch!
+17:16:47 INFO - main: lambda : 0.0004
+17:16:47 INFO - main: lambda : 0.0004
+17:16:47 INFO - main: milestones: [18, 22]
+17:16:47 INFO - main: milestones: [18, 22]
+17:16:47 INFO - main: batch_size : 8
+17:16:47 INFO - main: batch_size : 8
+17:16:47 INFO - main: Joint image-text loss coefficient: 0.0025
+17:16:47 INFO - main: Joint image-text loss coefficient: 0.0025
+17:16:47 INFO - main: LPIPS coefficient: 3.5
+17:16:47 INFO - main: LPIPS coefficient: 3.5
+17:19:05 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:19:05 INFO - ddp_or_single_process: find checkpoint...
+17:19:05 INFO - ddp_or_single_process: no checkpoint is here
+17:19:05 INFO - ddp_or_single_process: seed : 100.0
+17:19:05 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+17:19:05 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_pal4vst/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 2})
+17:19:05 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:19:05 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:19:05 INFO - main: Create experiment save folder
+17:19:05 INFO - main: Create experiment save folder
+17:19:07 INFO - main: Training mode : scratch!
+17:19:07 INFO - main: Training mode : scratch!
+17:19:07 INFO - main: lambda : 0.0004
+17:19:07 INFO - main: lambda : 0.0004
+17:19:07 INFO - main: milestones: [18, 22]
+17:19:07 INFO - main: milestones: [18, 22]
+17:19:07 INFO - main: batch_size : 8
+17:19:07 INFO - main: batch_size : 8
+17:19:07 INFO - main: Joint image-text loss coefficient: 0.0025
+17:19:07 INFO - main: Joint image-text loss coefficient: 0.0025
+17:19:07 INFO - main: LPIPS coefficient: 3.5
+17:19:07 INFO - main: LPIPS coefficient: 3.5
+17:23:37 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:23:37 INFO - ddp_or_single_process: find checkpoint...
+17:23:37 INFO - ddp_or_single_process: no checkpoint is here
+17:23:37 INFO - ddp_or_single_process: seed : 100.0
+17:23:37 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+17:23:37 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_pal4vst/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 2})
+17:23:37 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:23:37 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:23:37 INFO - main: Create experiment save folder
+17:23:37 INFO - main: Create experiment save folder
+17:23:39 INFO - main: Training mode : scratch!
+17:23:39 INFO - main: Training mode : scratch!
+17:23:39 INFO - main: lambda : 0.0004
+17:23:39 INFO - main: lambda : 0.0004
+17:23:39 INFO - main: milestones: [18, 22]
+17:23:39 INFO - main: milestones: [18, 22]
+17:23:39 INFO - main: batch_size : 8
+17:23:39 INFO - main: batch_size : 8
+17:23:39 INFO - main: Joint image-text loss coefficient: 0.0025
+17:23:39 INFO - main: Joint image-text loss coefficient: 0.0025
+17:23:39 INFO - main: LPIPS coefficient: 3.5
+17:23:39 INFO - main: LPIPS coefficient: 3.5
+17:33:20 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:33:20 INFO - ddp_or_single_process: find checkpoint...
+17:33:20 INFO - ddp_or_single_process: no checkpoint is here
+17:33:20 INFO - ddp_or_single_process: seed : 100.0
+17:33:20 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+17:33:20 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_pal4vst/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 2})
+17:33:20 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:33:20 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:33:20 INFO - main: Create experiment save folder
+17:33:20 INFO - main: Create experiment save folder
+17:33:23 INFO - main: Training mode : scratch!
+17:33:23 INFO - main: Training mode : scratch!
+17:33:23 INFO - main: lambda : 0.0004
+17:33:23 INFO - main: lambda : 0.0004
+17:33:23 INFO - main: milestones: [18, 22]
+17:33:23 INFO - main: milestones: [18, 22]
+17:33:23 INFO - main: batch_size : 8
+17:33:23 INFO - main: batch_size : 8
+17:33:23 INFO - main: Joint image-text loss coefficient: 0.0025
+17:33:23 INFO - main: Joint image-text loss coefficient: 0.0025
+17:33:23 INFO - main: LPIPS coefficient: 3.5
+17:33:23 INFO - main: LPIPS coefficient: 3.5
+17:39:29 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:39:29 INFO - ddp_or_single_process: find checkpoint...
+17:39:29 INFO - ddp_or_single_process: no checkpoint is here
+17:39:29 INFO - ddp_or_single_process: seed : 100.0
+17:39:29 INFO - ddp_or_single_process: exp name : exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5
+17:39:29 INFO - ddp_or_single_process: opts: Namespace(aux_learning_rate=0.001, batch_size=8, checkpoint='None', clip_max_norm=1.0, dist_port=6411, epochs=25, joint_image_text_loss_coefficient=0.0025, learning_rate=0.0001, lmbda=0.0004, lpips_coefficient=3.5, lr_epoch=[18, 22], num_workers=12, patch_size=[256, 256], save_path='./checkpoint_pal4vst/exp_lambda_0.0004_seed_100.0_batch_size_8_joint_image_text_loss_coefficient_0.0025_lpips_coefficient_3.5', seed=100.0, train_dataset_root_path='/scratch/09004/sravana/MSCOCO', **{'ddp.world_size': 1, 'dev.num_gpus': 2})
+17:39:29 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:39:29 INFO - logger_setup: /work/09004/sravana/ls6/ncomp/taco/utils/utils.py
+17:39:29 INFO - main: Create experiment save folder
+17:39:29 INFO - main: Create experiment save folder
+17:39:33 INFO - main: Training mode : scratch!
+17:39:33 INFO - main: Training mode : scratch!
+17:39:33 INFO - main: lambda : 0.0004
+17:39:33 INFO - main: lambda : 0.0004
+17:39:33 INFO - main: milestones: [18, 22]
+17:39:33 INFO - main: milestones: [18, 22]
+17:39:33 INFO - main: batch_size : 8
+17:39:33 INFO - main: batch_size : 8
+17:39:33 INFO - main: Joint image-text loss coefficient: 0.0025
+17:39:33 INFO - main: Joint image-text loss coefficient: 0.0025
+17:39:33 INFO - main: LPIPS coefficient: 3.5
+17:39:33 INFO - main: LPIPS coefficient: 3.5
