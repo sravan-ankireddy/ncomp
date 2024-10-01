@@ -16,6 +16,7 @@ def main() -> None:
     pl.seed_everything(config.lightning.seed, workers=True)
     
     data_module = instantiate_from_config(config.data)
+    # breakpoint()
     model = instantiate_from_config(OmegaConf.load(config.model.config))
     # TODO: resume states saved in checkpoint.
     if config.model.get("resume"):
@@ -25,6 +26,7 @@ def main() -> None:
     for callback_config in config.lightning.callbacks:
         callbacks.append(instantiate_from_config(callback_config))
     trainer = pl.Trainer(callbacks=callbacks, **config.lightning.trainer)
+    # breakpoint()
     trainer.fit(model, datamodule=data_module)
 
 

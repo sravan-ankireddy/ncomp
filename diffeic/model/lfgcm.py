@@ -292,7 +292,7 @@ class LFGCM(CompressionModel):
         self.entropy_bottleneck = EntropyBottleneck(N)
         self.gaussian_conditional = GaussianConditional(None)
 
-    def forward(self, x, ref):
+    def forward(self, x, ref):        
         y = self.encoder(x, ref)
         z = self.hyper_enc(y, ref)
         _, z_likelihoods = self.entropy_bottleneck(z)
@@ -331,6 +331,7 @@ class LFGCM(CompressionModel):
                 # split means and scales of anchor
                 scales_anchor = ckbd_anchor(scales_anchor)
                 means_anchor = ckbd_anchor(means_anchor)
+                # breakpoint()
                 # round anchor
                 slice_anchor = quantize_ste(slice_anchor - means_anchor) + means_anchor
                 

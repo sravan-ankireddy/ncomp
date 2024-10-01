@@ -50,7 +50,7 @@ class LICDataset(data.Dataset):
             # assert pil_img_gt.shape[:2] == (self.out_size, self.out_size)
         # hwc, [0, 255] to [0, 1], float32
         img_gt = (pil_img_gt / 255.0).astype(np.float32)
-        
+
         # random horizontal flip
         img_gt = augment(img_gt, hflip=self.use_hflip, rotation=self.use_rot, return_status=False)
         

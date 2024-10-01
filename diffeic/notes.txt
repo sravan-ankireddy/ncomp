@@ -1,9 +1,9 @@
 
 # create list
-python3 make_file_list.py --train_folder /scratch/09004/sravana/MSCOCO/train2014 --valid_folder /scratch/09004/sravana/MSCOCO/val2014 --save_folder /work/09004/sravana/ls6/ncomp/diffeic/datalists
+python make_file_list.py --train_folder /mnt/datasets/LSDIR/train --valid_folder /mnt/datasets/LSDIR/val --save_folder /home/sa53869/diffeic/datalists
 
 # inference
-python3 inference_partition.py --ckpt_sd ./weight/v2-1_512-ema-pruned.ckpt --ckpt_lc ./weight/1_2_1/lc.ckpt --config configs/model/diffeic.yaml --input /scratch/09004/sravana/Kodak --output /work/09004/sravana/ls6/ncomp/diffeic/results --steps 50 --device cuda 
+python inference_partition.py --ckpt_sd ./weight/v2-1_512-ema-pruned.ckpt --ckpt_lc ./weight/1_2_1/lc.ckpt --config configs/model/diffeic.yaml --input /scratch/09004/sravana/Kodak --output /home/sa53869/diffeic/results --steps 50 --device cuda 
 
 # training
-python3 train.py
+python train.py
