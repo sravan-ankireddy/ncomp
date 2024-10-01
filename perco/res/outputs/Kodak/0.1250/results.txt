@@ -1,0 +1,26 @@
+kodim01,a brick building with red shutters and a red stop sign,0.00171,0.12503,0.12674,21.57954,0.80141,0.16562
+kodim02,a close up of a red wooden door with a white ball on it,0.00174,0.12503,0.12677,26.33309,0.85530,0.12987
+kodim03,a group of hats hanging on a wall with a kite flying above,0.00186,0.12503,0.12689,25.07448,0.90871,0.09331
+kodim04,a woman wearing a red hat and a necklace,0.00140,0.12503,0.12643,24.12906,0.85819,0.12766
+kodim05,a row of people on dirt bikes lined up in a row,0.00156,0.12503,0.12659,18.57870,0.77552,0.19723
+kodim06,a boat is floating in the ocean near a shoreline,0.00159,0.12503,0.12662,21.78682,0.78304,0.14412
+kodim07,a pink flower is in front of a window with blue shutters,0.00174,0.12503,0.12677,22.41691,0.90053,0.12551
+kodim08,a group of buildings in a city with a clock tower in the background,0.00198,0.12503,0.12701,18.62663,0.83923,0.17165
+kodim09,a group of sailboats in the water with colorful sails,0.00168,0.12503,0.12671,22.96251,0.89700,0.10043
+kodim10,a group of sailboats in the water with people on them,0.00171,0.12503,0.12674,23.68180,0.89273,0.11978
+kodim11,a boat is docked at a pier in the ocean,0.00137,0.12503,0.12640,22.29846,0.83331,0.16350
+kodim12,a man and woman walking on the beach with flippers,0.00168,0.12503,0.12671,24.41895,0.87613,0.13466
+kodim13,a river runs through a forest with mountains in the background,0.00186,0.12503,0.12689,18.69477,0.70714,0.28216
+kodim14,a group of people are riding in a raft on a river,0.00156,0.12503,0.12659,20.82293,0.77279,0.19400
+kodim15,a little girl with a colorful face paint and a bow on her head,0.00186,0.12503,0.12689,24.12523,0.90023,0.10862
+kodim16,a large body of water with a small island in the middle,0.00171,0.12503,0.12674,24.92942,0.84586,0.12977
+kodim17,a statue of a man holding a gold ball,0.00128,0.12503,0.12631,23.63162,0.86825,0.14675
+kodim18,a woman in a dress standing next to a sculpture,0.00159,0.12503,0.12662,20.75968,0.77900,0.19631
+kodim19,a white fence with a lighthouse behind it,0.00143,0.12503,0.12646,23.14108,0.87497,0.11418
+kodim20,a small plane with a yellow and black paint job,0.00159,0.12503,0.12662,23.63003,0.91235,0.09633
+kodim21,a lighthouse sits on a rocky shoreline next to the ocean,0.00171,0.12503,0.12674,21.75350,0.85515,0.15071
+kodim22,a red barn sits next to a pond and trees,0.00140,0.12503,0.12643,23.36855,0.80198,0.16994
+kodim23,two parrots standing next to each other with leaves in the background,0.00201,0.12503,0.12704,24.08794,0.89796,0.08640
+kodim24,a house with a painted mural on the side of it,0.00150,0.12503,0.12653,20.80974,0.82717,0.17898
+
+avg,0.00165,0.12503,0.12668,22.56840,0.84433,0.14698

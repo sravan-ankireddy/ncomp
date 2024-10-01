@@ -1,0 +1,62 @@
+aaron-greenwood-x9zy_1oHjqw-unsplash,a man is riding a horse on a grassy hillside,0.00150,0.03128,0.03278,16.89052,0.41181,0.37869
+abhas-mishra-BD3qGeorAFY-unsplash,a man standing in a doorway with a mustache and a turban,0.00174,0.03128,0.03302,18.39744,0.70382,0.26424
+abhay-singh-GGO53CCHM_Q-unsplash,a man sitting on a chair in a room with a window,0.00156,0.03128,0.03284,20.18633,0.71807,0.28184
+adrian-moise-0iRqoHHxjQk-unsplash,a group of people walking in a cave with a light on,0.00165,0.03128,0.03293,15.10978,0.53796,0.46592
+alireza-zarafshani-lmZf8EVSmWM-unsplash,a man wearing a turban and standing in front of a building,0.00177,0.03128,0.03305,19.39068,0.77484,0.21800
+andy-kelly-0E_vhMVqL9g-unsplash,a girl is shaking hands with a robot in a store,0.00156,0.03128,0.03284,15.55565,0.61882,0.37542
+ban-yido--rP8CP8usWc-unsplash,a group of men sitting on a bench playing instruments,0.00177,0.03128,0.03305,16.15699,0.64772,0.35360
+bantersnaps-2IAyiEitv-A-unsplash,a view of a city street with cars driving down it,0.00162,0.03128,0.03290,15.88037,0.71789,0.25375
+bernardo-ramonfaur-fhahHV8wSnI-unsplash,a woman wearing a hat and a scarf with ribbons,0.00156,0.03128,0.03284,15.57325,0.66645,0.31599
+darsh-nishar-jj4iWf9L23w-unsplash,a long pool of water in front of a white building,0.00162,0.03128,0.03290,20.66476,0.81584,0.18977
+dr-3amer-TiqE8eJUrMU-unsplash,a young boy wearing a red and white scarf on his head,0.00171,0.03128,0.03299,17.48912,0.79933,0.16554
+elcarito-lFJJM6hmne4-unsplash,a man is sewing on a sewing machine in front of a building,0.00174,0.03128,0.03302,19.61197,0.69266,0.32475
+fezbot2000-9GHW302mRBk-unsplash,a monkey sitting on a rock looking to the side,0.00156,0.03128,0.03284,22.42206,0.83469,0.17843
+gints-gailis-Vi_YsiO0Kd8-unsplash,a view of a winding road surrounded by green hills,0.00165,0.03128,0.03293,19.31561,0.65468,0.33112
+gracehues-photography-qyIhTg2x8jk-unsplash,a colorful parrot sitting on a branch near a rock wall,0.00171,0.03128,0.03299,17.42493,0.56107,0.37804
+hanny-naibaho-D7InODIWyK4-unsplash,a group of people walking in a city street with tall buildings,0.00189,0.03128,0.03317,13.75901,0.57476,0.34416
+hessam-nabavi-HJyT-uUkk_M-unsplash,a woman is looking over her shoulder while wearing a scarf,0.00183,0.03128,0.03311,19.95360,0.69948,0.27796
+himanshu-singh-gurjar-iSi02D_Qx_w-unsplash,a little girl with pink hair and paint on her face,0.00159,0.03128,0.03287,17.84802,0.71010,0.29294
+jan-henckens-H7hsy3wlmUk-unsplash,a stone street with a few buildings and a clock,0.00159,0.03128,0.03287,16.64095,0.62451,0.31712
+jason-ortego-GbZsvIIi4Xw-unsplash,a group of people walking down a city street with tall buildings in the background,0.00223,0.03128,0.03351,17.33414,0.67391,0.31598
+jezael-melgoza-7H77FWkK_x4-unsplash,a view of a city street with a tower in the background,0.00177,0.03128,0.03305,17.20044,0.64495,0.31572
+jezael-melgoza-layMbSJ3YOE-unsplash,a group of people walking down a city street with colorful lights,0.00189,0.03128,0.03317,13.13362,0.40030,0.43088
+jose-aragones-Bg7PsenHNeE-unsplash,a man with a long beard and a large headdress,0.00153,0.03128,0.03281,17.27680,0.60614,0.32067
+jose-ignacio-pompe-hA_fShk7ud8-unsplash,a camel is standing next to a man in a black robe,0.00165,0.03128,0.03293,17.79204,0.51919,0.36172
+juanma-velasquez-la7uU1hQ_nM-unsplash,a woman holding a cell phone with her left hand,0.00159,0.03128,0.03287,20.61053,0.83627,0.23376
+kanokphon-chaemchoi-R6ksOVDT-_k-unsplash,a round table with a bench in front of a window,0.00159,0.03128,0.03287,16.83942,0.69372,0.30340
+krisztian-matyas-VjXypf_IKyM-unsplash,a cat is sitting on a window sill looking out,0.00146,0.03128,0.03275,18.61045,0.73087,0.27019
+laura-chouette-mVItXllDCuA-unsplash,a woman taking a picture of herself in a mirror,0.00159,0.03128,0.03287,18.88401,0.76635,0.24942
+loren-joseph-GVeJ-TXWJ1g-unsplash,a woman is smiling while holding her head with her hand,0.00165,0.03128,0.03293,15.91884,0.64939,0.33864
+luca-anasta-JMNXb6KBJwI-unsplash,a man with a long beard and a red turban,0.00140,0.03128,0.03268,17.26106,0.75045,0.24406
+lucas-ludwig-BgA72cNAo5Y-unsplash,a man sitting on a bench with a camera and a hat,0.00156,0.03128,0.03284,19.03224,0.77279,0.21383
+luqman-hariz--s529_PPy1Y-unsplash,a large building with many windows and a clock on top,0.00177,0.03128,0.03305,16.86163,0.62581,0.27877
+lynda-hinton-HayTQnEEtrQ-unsplash,a man pushing a shopping cart full of bananas down a street,0.00186,0.03128,0.03314,14.24765,0.57451,0.40423
+mahamed-salama-o4USOqjzH2I-unsplash,a woman in a dress holding an umbrella in the desert,0.00165,0.03128,0.03293,21.34543,0.74566,0.26740
+marius-george-oprea-hSFmn7lLp0g-unsplash,a large library with many people inside of it,0.00156,0.03128,0.03284,12.96089,0.54774,0.41450
+matthaeus-hew8vAvvvz4-unsplash,a row of colorful buildings with a fire hydrant in front of each,0.00195,0.03128,0.03323,17.62971,0.76705,0.21646
+mehrnegar-dolatmand-O_5capTKt2Q-unsplash,a woman with flowers painted on her face and a cell phone,0.00168,0.03128,0.03296,20.01006,0.72516,0.30155
+mohammed-hassan-qm7gFVsIV5s-unsplash,a man in a car with sunglasses on and a cell phone,0.00165,0.03128,0.03293,18.32510,0.77222,0.23564
+nachelle-nocom-Rv77p0__6SY-unsplash,a large building with a sign on it at night,0.00143,0.03128,0.03271,15.57220,0.61738,0.35717
+omar-elsharawy-gFHBofW3ncQ-unsplash,a young girl wearing a scarf on her head and looking at something,0.00195,0.03128,0.03323,22.36189,0.85055,0.16956
+omri-d-cohen-bzXLV93YL2k-unsplash,a group of people are walking along a grassy hillside,0.00174,0.03128,0.03302,18.24982,0.55540,0.37104
+oriol-casas-C7m7RSFONYc-unsplash,a woman in a yellow sari smiling for the camera,0.00159,0.03128,0.03287,12.70815,0.56676,0.29918
+oscar-keys-iWNFqEYpmmo-unsplash,a view of a building with a clock on it's side,0.00159,0.03128,0.03287,19.52503,0.79013,0.20592
+patrick-minero-DG1cd69wKng-unsplash,a green iguana sitting on a log with people in the background,0.00180,0.03128,0.03308,18.55173,0.64297,0.33846
+photo-1604443703960-33f6a9081ca8,a priest wearing a mask and holding a cup,0.00137,0.03128,0.03265,19.35124,0.80441,0.25610
+priscilla-du-preez-Vzsh-CuzCrU-unsplash,a group of men in blue and white costumes pose for a picture,0.00180,0.03128,0.03308,12.49347,0.39840,0.47004
+randy-tarampi-a5KMylND9Bo-unsplash,a red trolley car is driving down a snowy street,0.00156,0.03128,0.03284,14.56013,0.50254,0.45434
+rex-way-c2BcE2zPXjc-unsplash,a man standing in a field with a jacket on,0.00146,0.03128,0.03275,19.28804,0.75636,0.24737
+rosalind-chang-eGPzjlMeeBg-unsplash,a llama standing on a stone wall next to a stone wall,0.00143,0.03128,0.03271,16.30765,0.63092,0.30260
+roxanne-desgagnes-GUZHrk3Agco-unsplash,a woman is holding a cell phone in front of her,0.00159,0.03128,0.03287,17.37271,0.76461,0.22580
+sam-balye-g_j0P4dkkd0-unsplash,a golden dragon statue in front of a city skyline,0.00162,0.03128,0.03290,18.62308,0.72975,0.25180
+srinivas-jd-_xBVCanNjcs-unsplash,a woman in a red dress standing in a field,0.00140,0.03128,0.03268,18.56531,0.60160,0.39385
+theo-rql-a4pyoiTdSqI-unsplash,a woman with long hair and blue eyes is looking at the camera,0.00186,0.03128,0.03314,21.69594,0.86328,0.14452
+theodor-vasile-Zbie8Cjsdu4-unsplash,a person walking down a snowy road with a snowboard,0.00165,0.03128,0.03293,18.89584,0.72380,0.27618
+tom-chen-jO1OyKR7s68-unsplash,a woman in a yellow sari is leaning against a wall,0.00162,0.03128,0.03290,21.53089,0.83833,0.21481
+vijeshwar-datt-EaBYKGnfwdw-unsplash,a man wearing a straw hat smiles for the camera,0.00153,0.03128,0.03281,18.23606,0.76065,0.21138
+youhana-nassif-YBpSX76CQaE-unsplash,a set of stairs leading up to a building with a door,0.00165,0.03128,0.03293,18.07944,0.68190,0.30948
+yousef-salhamoud-MN1kPDS3si8-unsplash,a man is working on a blue piece of fabric in a room,0.00168,0.03128,0.03296,21.72039,0.79089,0.27280
+zach-vessels-4i6OFPlJOFg-unsplash,a young boy smiles while holding a backpack and a cell phone,0.00180,0.03128,0.03308,19.47565,0.82356,0.14115
+zane-lee-CpdxeZAN5y0-unsplash,a large building with a clock tower and a flag pole,0.00171,0.03128,0.03299,20.25792,0.80903,0.17057
+
+avg,0.00166,0.03128,0.03294,17.88280,0.68450,0.29180
