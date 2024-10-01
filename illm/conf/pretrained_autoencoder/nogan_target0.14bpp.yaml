@@ -1,0 +1,3 @@
+torchhub:
+  github: facebookresearch/NeuralCompression
+  model: noganms_quality_3
