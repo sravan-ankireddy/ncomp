@@ -1,0 +1,20 @@
+accelerate launch --multi_gpu --num_processes=2 /work/09004/sravana/ls6/ncomp/perco/src/train_sd_perco.py \
+--pretrained_model_name_or_path="/work/09004/sravana/ls6/ncomp/perco/src/models_chk/0.0313/cmvl_2024_full_train" \
+--validation_image "/work/09004/sravana/ls6/ncomp/perco/res/eval/kodim13.png" "/work/09004/sravana/ls6/ncomp/perco/res/eval/kodim23.png" \
+--allow_tf32 \
+--dataloader_num_workers=24 \
+--resolution=512 --center_crop --random_flip \
+--train_batch_size=20 \
+--gradient_accumulation_steps=8 \
+--num_train_epochs=5 \
+--max_train_steps 1000 \
+--validation_steps 500 \
+--prediction_type="v_prediction" \
+--checkpointing_steps 500 \
+--learning_rate=1e-05 \
+--adam_weight_decay=1e-2 \
+--max_grad_norm=1 \
+--lr_scheduler="constant" \
+--lr_warmup_steps=10000 \
+--checkpoints_total_limit=2 \
+--output_dir="res/cmvl_2024_finetune_320/0.0313/" \
