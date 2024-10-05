@@ -1,0 +1,30 @@
+{
+  "architectures": [
+    "CLIPModel"
+  ],
+  "initializer_factor": 1.0,
+  "logit_scale_init_value": 2.6592,
+  "model_type": "clip",
+  "projection_dim": 1024,
+  "text_config": {
+    "eos_token_id": 1,
+    "hidden_size": 1024,
+    "intermediate_size": 4096,
+    "model_type": "clip_text_model",
+    "num_attention_heads": 16,
+    "num_hidden_layers": 24,
+    "pad_token_id": 0,
+    "vocab_size": 32100
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.37.2",
+  "vision_config": {
+    "hidden_size": 1280,
+    "image_size": 336,
+    "intermediate_size": 5120,
+    "model_type": "clip_vision_model",
+    "num_attention_heads": 16,
+    "num_hidden_layers": 32,
+    "patch_size": 14
+  }
+}

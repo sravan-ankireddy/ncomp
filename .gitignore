@@ -2,6 +2,8 @@
 *.tar
 *.pt
 *.pth
+.*ckpt
 taco/tacc/*
 perco/src/models_chk/*
 diffeic/weight/*
+*.safetensors
