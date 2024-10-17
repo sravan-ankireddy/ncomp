@@ -186,7 +186,7 @@ def compress(args):
     # 2. Get image caption (BLIP 2)
     print('Retrieving {} caption...'.format(cfg_perco.blip_model))
 
-    device = "cuda:2" if torch.cuda.is_available() else "cpu"
+    device = "cuda:1" if torch.cuda.is_available() else "cpu"
     processor = Blip2Processor.from_pretrained(cfg_perco.blip_model)
     blip2 = Blip2ForConditionalGeneration.from_pretrained(cfg_perco.blip_model).to(device)
     inputs = processor(images=img * 255, return_tensors="pt").to(device)
@@ -286,7 +286,7 @@ def compress(args):
 def decompress(args):
     """Decompresses an image."""
 
-    device = "cuda:2" if torch.cuda.is_available() else "cpu"
+    device = "cuda:1" if torch.cuda.is_available() else "cpu"
     # --- Decoder ---
     # 1. Decompress caption (zlib), hyper-latent (AC)
     # 2. Run decompression (handled by our custom StableDiffusionPipelinePerco pipeline)
@@ -364,7 +364,7 @@ def evaluate_ds(args):
         os.makedirs(out_dir_fake)
 
     os.makedirs(out_dir, exist_ok=True)
-    device = "cuda:2" if torch.cuda.is_available() else "cpu"
+    device = "cuda:1" if torch.cuda.is_available() else "cpu"
 
     # prepare BLIP 2
     processor = Blip2Processor.from_pretrained(cfg_perco.blip_model)
@@ -420,6 +420,16 @@ def evaluate_ds(args):
         # add assertion
         assert old_length - new_length == len(bpp_text_arr)
 
+    # Define the headings
+    headings = "Filename,Generated_Text,BPP_Text,BPP_Hyper_Latent,BPP_Total,PSNR,MSSSIM,LPIPS\n"
+
+    # Open the results file in append mode
+    with open(results_file, "a", encoding="utf-8") as text_file:
+        # Check if the file is empty (no content or no headings)
+        if os.stat(results_file).st_size == 0:
+            # Write the headings if the file is empty
+            text_file.write(headings)
+
     # Iterate over each image in the dataset
     for filename in filenames:
         if filename.endswith(".png") or filename.endswith(".jpg"):
@@ -471,7 +481,7 @@ def evaluate_ds(args):
             out_path_rec = out_dir_fake + filename_wo_ext + '_otp.png'
 
             write_png(out_path_rec, x_hat)
-            write_png(out_path_orig, to_pil(img))
+            # write_png(out_path_orig, to_pil(img))
 
             # 9. Compute metrics
             x = img
@@ -496,6 +506,10 @@ def evaluate_ds(args):
             lpips_arr.append(lpips)
 
     # 10. Write summary to disk
+    # Open the results file in append mode
+    with open(results_file, "a") as text_file:
+            text_file.write('\n')
+            text_file.write(headings)
     with open(results_file, "a") as text_file:
         text_file.write('\n{},{:.5f},{:.5f},{:.5f},{:.5f},{:.5f},{:.5f}'.format('avg', np.mean(bpp_text_arr),
                                                                                 np.mean(bpp_hyper_latent_arr),
