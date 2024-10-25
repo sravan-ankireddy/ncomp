@@ -16,6 +16,162 @@ from efficientvit.models.utils.network import get_device, get_submodule_weights
 
 __all__ = ["UViTConfig", "UViT", "dc_ae_uvit_s_in_512px", "dc_ae_uvit_h_in_512px"]
 
+import torch.nn.functional as F
+
+########
+
+import torch
+import torch.nn as nn
+from torch import Tensor
+from vector_quantize_pytorch import VectorQuantize
+
+from diffusers.configuration_utils import ConfigMixin, register_to_config
+from diffusers.models.modeling_utils import ModelMixin
+from diffusers.utils import BaseOutput
+from dataclasses import dataclass
+
+from compressai.layers import AttentionBlock, conv3x3
+from compressai.models.utils import conv, deconv
+
+
+## modules for enbedding textual information
+
+def conv1x1(in_ch: int, out_ch: int, stride: int = 1) -> nn.Module:
+    """1x1 convolution."""
+    return nn.Conv2d(in_ch, out_ch, kernel_size=1, stride=stride)
+
+
+class ResidualBottleneckBlock(nn.Module):
+    """Simple residual block with two 3x3 convolutions.
+    Args:
+        in_ch (int): number of input channels
+        out_ch (int): number of output channels
+    """
+
+    def __init__(self, in_ch: int):
+        super().__init__()
+
+        self.layers = nn.Sequential(
+            conv1x1(in_ch, in_ch // 2),
+            nn.ReLU(inplace=True),
+            conv3x3(in_ch // 2, in_ch // 2),
+            nn.ReLU(inplace=True),
+            conv1x1(in_ch // 2, in_ch),
+        )
+
+    def forward(self, image: Tensor) -> Tensor:
+        return image + self.layers(image)
+
+
+@dataclass
+class HyperEncoderOutput(BaseOutput):
+    """
+    The output of [`HyperEncoder`].
+
+    Args:
+        z (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`):
+            Continous encoder output.
+        z_hat (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`):
+            VQ quantized encoder output.
+        indices (`torch.IntTensor` of shape `(batch_size, height, width)`):
+            Indices of quantized encoder output.
+        commit_loss (`torch.FloatTensor`):
+            VQ-VAE commitment loss
+    """
+
+    z: torch.FloatTensor = None
+    z_hat: torch.FloatTensor = None
+    indices: torch.IntTensor = None
+    commit_loss: torch.FloatTensor = None
+
+
+# Note that in PerCo the bit-rate is controlled via upper bound, similar to Agustsson et al., ICCV 2019 
+class HyperEncoder(ModelMixin, ConfigMixin):
+    """PerCo Hyper-Encoder.
+
+    Call with, e.g. target_rate=0.1250:
+
+    # spatial size, codebook size
+    cfg_ss, cfg_cs = cfg[target_rate]
+
+    enc = HyperEncoder(cfg_ss=cfg_ss, cfg_cs=cfg_cs)
+
+    # official configuration:
+    # Hyper-encoder has been provided by the authors
+    # 0.1250 (4,080,128) # 0.0019 (5,868,032)
+    # paper reports incorrect number of params (4-8M; checked with authors)
+
+    Args:
+        in_channels: shape of the input tensor
+        N: see code below
+        M: see code below 
+        codebook_dim: output dimension of hyper-encoder (backbone)
+        cfg_ss: VQ spatial size
+        cfg_cs: VQ codebook size
+    """
+
+    _supports_gradient_checkpointing = True
+
+    @register_to_config
+    def __init__(
+            self,
+            in_channels: int = 128,
+            N=192,
+            M=320,
+            codebook_dim=32,
+            cfg_ss=64,
+            cfg_cs=256,
+    ):
+        super().__init__()
+
+        vq_spatialdim = cfg_ss
+        self.backbone = nn.Sequential(
+            conv1x1(in_channels, N) if vq_spatialdim >= 16 else conv(in_channels, N),
+            ResidualBottleneckBlock(N),
+            ResidualBottleneckBlock(N),
+            ResidualBottleneckBlock(N),
+            conv1x1(N, N) if vq_spatialdim >= 32 else conv(N, N),
+            ResidualBottleneckBlock(N),
+            ResidualBottleneckBlock(N),
+            ResidualBottleneckBlock(N),
+            AttentionBlock(N),
+            conv1x1(N, N) if vq_spatialdim == 64 else conv(N, N),
+            ResidualBottleneckBlock(N),
+            ResidualBottleneckBlock(N),
+            ResidualBottleneckBlock(N),
+            conv1x1(N, M),
+            AttentionBlock(M)
+        )
+
+        # VQ
+        self.quantizer = VectorQuantize(dim=M,
+                                        codebook_size=cfg_cs,
+                                        use_cosine_sim = True,
+                                        codebook_dim=codebook_dim)
+
+    def forward(self, z: Tensor) -> Tensor:
+        z = self.backbone(z)
+
+        # (B,C,H,W) -> (B,H,W,C)
+        z_perm = z.permute(0, 2, 3, 1)
+        b, h, w, c = z_perm.shape
+
+        # (B,H*W,C)
+        z_perm = z_perm.view(b, -1, c)
+        # (B,H*W,C), (B,H*W)
+        z_hat, indices, commit_loss = self.quantizer(z_perm)
+        # (B,H,W,C)
+        z_hat = z_hat.view(b, h, w, c)
+        # (B,C,H,W)
+        z_hat = z_hat.permute(0, 3, 1, 2)
+        # (B,H,W)
+        indices = indices.view(b, h, w)
+
+        return HyperEncoderOutput(z=z, z_hat=z_hat, indices=indices, commit_loss=commit_loss)
+
+
+
+
 
 if hasattr(torch.nn.functional, "scaled_dot_product_attention"):
     ATTENTION_MODE = "flash"
@@ -347,6 +503,9 @@ class UViT(nn.Module):
         self.patch_dim = cfg.patch_size**2 * cfg.in_channels
         self.decoder_pred = nn.Linear(cfg.hidden_size, self.patch_dim, bias=True)
         self.final_layer = nn.Identity()
+        
+        # hyper
+        self.hyper_enc = HyperEncoder(cfg_ss=32, cfg_cs=512)
 
         if cfg.pretrained_path is not None:
             self.load_model()
@@ -454,14 +613,22 @@ class UViT(nn.Module):
         return torch.cat([eps, rest], dim=1)
 
     def forward(self, x, y, generator: Optional[torch.Generator] = None):
+        hyper_latent = self.hyper_enc(x)
+        z, z_hat, z_hat_indices, commit_loss = hyper_latent.z, hyper_latent.z_hat, hyper_latent.indices, hyper_latent.commit_loss
+
+        # scale and append z_hat to x
+        z_hat_scaled = F.interpolate(z_hat, size=x.shape[2:], mode='nearest')
+        x_new = torch.cat([x, z_hat_scaled], dim=1)
+
         info = {}
         if self.cfg.train_scheduler == "DPM_Solver":
-            n, eps, xn = self.train_scheduler.sample(x)  # n in {1, ..., 1000}
+            n, eps, xn = self.train_scheduler.sample(x_new)  # n in {1, ..., 1000}
             eps_pred = self.forward_without_cfg(xn, n, y)
             loss = (eps - eps_pred).square().mean()
         else:
             raise NotImplementedError(f"train scheduler {self.cfg.train_scheduler} is not supported")
         info["loss_dict"] = {"loss": loss}
+        # breakpoint()
         return loss, info
 
     @torch.no_grad()
@@ -500,7 +667,7 @@ def dc_ae_uvit_s_in_512px(ae_name: str, scaling_factor: float, in_channels: int,
         f"autoencoder={ae_name} scaling_factor={scaling_factor} "
         f"model=uvit uvit.depth=12 uvit.hidden_size=512 uvit.num_heads=8 uvit.in_channels={in_channels} uvit.patch_size=1 "
         f"uvit.pretrained_path={'null' if pretrained_path is None else pretrained_path} "
-        "fid.ref_path=assets/data/fid/imagenet_512_train.npz"
+        "fid.ref_path=/raid/sa53869/datasets/imagenet/fid/imagenet_512_train.npz"
     )
 
 
@@ -509,5 +676,5 @@ def dc_ae_uvit_h_in_512px(ae_name: str, scaling_factor: float, in_channels: int,
         f"autoencoder={ae_name} scaling_factor={scaling_factor} "
         f"model=uvit uvit.depth=28 uvit.hidden_size=1152 uvit.num_heads=16 uvit.in_channels={in_channels} uvit.patch_size=1 "
         f"uvit.pretrained_path={'null' if pretrained_path is None else pretrained_path} "
-        "fid.ref_path=assets/data/fid/imagenet_512_train.npz"
+        "fid.ref_path=/raid/sa53869/datasets/imagenet/fid/imagenet_512_train.npz"
     )

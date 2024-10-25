@@ -33,7 +33,7 @@ def main():
         evaluator_cfg.resolution = 512
         evaluator_cfg.dataset = "imagenet"
         evaluator_cfg.imagenet.batch_size = 64
-        evaluator_cfg.fid.ref_path = "assets/data/fid/imagenet_512_val.npz"
+        evaluator_cfg.fid.ref_path = "/raid/sa53869/datasets/imagenet/fid/imagenet_512_train.npz"
     else:
         raise NotImplementedError
     evaluator_cfg.model = cfg.model

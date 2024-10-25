@@ -466,5 +466,5 @@ def dc_ae_dit_xl_in_512px(ae_name: str, scaling_factor: float, in_channels: int,
         f"autoencoder={ae_name} scaling_factor={scaling_factor} "
         f"model=dit dit.depth=28 dit.hidden_size=1152 dit.num_heads=16 dit.in_channels={in_channels} dit.patch_size=1 "
         f"dit.pretrained_path={'null' if pretrained_path is None else pretrained_path} "
-        "fid.ref_path=assets/data/fid/imagenet_512_train.npz"
+        "fid.ref_path=/raid/sa53869/datasets/imagenet/fid/imagenet_512_train.npz"
     )

@@ -12,7 +12,7 @@ __all__ = ["ImageNetDataProviderConfig", "ImageNetDataProvider"]
 @dataclass
 class ImageNetDataProviderConfig(BaseDataProviderConfig):
     name: str = "imagenet"
-    data_dir: str = "~/dataset/imagenet"
+    data_dir: str = "/raid/sa53869/datasets/imagenet/"
 
 
 class ImageNetDataProvider(BaseDataProvider):
