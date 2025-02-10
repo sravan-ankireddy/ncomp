@@ -1,0 +1,47 @@
+model:
+  target: CGIC.models.model.CGIC
+  params:
+    ignore_keys: []
+    learning_rate: 5e-5
+    ema_decay: 0.9999
+    embed_dim: 4
+    n_embed: 1024
+    monitor: val/rec_loss
+    image_size: 256
+    entropy_patch_size: 
+    - 8
+    - 16
+    ckpt_path: './ckpt/model.ckpt'
+    ddconfig:
+      double_z: false
+      z_channels: 4
+      resolution: 256
+      in_channels: 3
+      out_ch: 3
+      ch: 128
+      ch_mult:
+      - 1
+      - 2
+      - 2
+      - 4
+      - 4
+      num_res_blocks: 2
+      attn_resolutions:
+      - 32
+      dropout: 0.0
+      update_router: false
+      router_config:
+        target: CGIC.modules.vqvae.RouterTriple.TripleGrainFixedEntropyRouter
+        params:
+          coarse_grain_ratio: 0.1
+          medium_grain_ratio: 0.4
+    lossconfig:
+      target: CGIC.modules.losses.vqperceptual.VQLPIPSWithDiscriminator2
+      params:
+        disc_conditional: false
+        disc_in_channels: 3
+        disc_num_layers: 2
+        disc_start: 1
+        disc_weight: 0.8
+        codebook_weight: 1.0
+        perceptual_weight: 1.0
